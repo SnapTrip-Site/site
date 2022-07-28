@@ -1,12 +1,21 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins ', sans-serif; 
+  box-sizing: border-box;
+}
+
+.header-PaginaPrincipal{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(https://c8y3s8d4.stackpathcdn.com/wp-content/uploads/2015/06/aviao-orlando.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 .header{
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(https://c8y3s8d4.stackpathcdn.com/wp-content/uploads/2015/06/aviao-orlando.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -22,8 +31,10 @@ nav img{
 
 }
 .nav-links{
+  display: flex;
   flex: 1;
   text-align: right;
+  padding-left: 450px;
 }
 .nav-links ul li{
   list-style: none;
@@ -32,7 +43,7 @@ nav img{
   position: relative;
 }
 .nav-links ul li a{
-  color: #fff;
+  color: rgb(67, 111, 151);
   text-decoration: none;
   font-size: 13px ;
 }
@@ -181,10 +192,13 @@ h3{
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+  
 }
 .locais-coluna img{
   width: 100%;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  
 }
 .layer{
   background: transparent;
@@ -314,89 +328,1024 @@ h3{
 }
 
 /*---footer---*/
+
 .footer{
+  margin-top: 150px;
   width: 100%;
+  padding: 100px 15%;
+  background: #333;
+  color: #efefef;
+  display: flex;
+
+}
+
+.footer div{
   text-align: center;
-  padding: 30px 0;
+
 }
-.footer h4{
+
+.col-2{
+  flex-grow: 2;
+  width: 40px;
+}
+
+.footer div h3{
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.col-1 a{
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin-bottom: 10px;
+}
+form input{
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
   margin-top: 20px;
-  margin-bottom: 25px;
-  font-weight: 600;
-
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
 }
 
-.icones .fa{
-  color: #b79a8d;
-  margin: 0 13px;
-  cursor: pointer;
-  padding: 18px 0;
-}
+  form button{
+    background: transparent;
+    border: 2px;
+    color: rgb(253, 253, 253);
+    border-radius: 30px;
+    padding: 10px 30px;
+    cursor: pointer;
+  }
+
 
 /*-----Formulario-----*/
 
-div.viagem {
-  margin: 10px 0;
-  background-image: linear-gradient( to right, #9b9894, #a6a6a6);
-}
 
-div.viagem.inlined {
-  width: 49%;
+
+/*--Pagina de Estadia--*/
+body {
+  margin: 0;
+  line-height: normal;
+}
+.background-estadia-div {
+  position: absolute;
+  top: 0;
+  left: 206px;
+  border-radius: 38px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 203px;
+  height: 946.22px;
+}
+.estadia-div {
+  position: absolute;
+  top: 40.93px;
+  left: 262px;
   display: inline-block;
-  float: left;
-  margin-left: 1%;
+  width: 90.57px;
+  height: 25.73px;
 }
-
-label {
-  display: block;
-  font-family: 'Nanum Gothic';
-  padding-bottom: 10px;
-  font-size: 1.25em;
+.background-transporte-div,
+.fundo-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 38px;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 214px;
+  height: 1290.82px;
 }
-
-input, select, textarea {
-  border-radius: 2px;
-  border: 2px solid #777;
+.fundo-div {
+  top: 79.96px;
+  border-radius: 56px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 1307px;
+  height: 1227.04px;
+}
+.transporte-div {
+  position: absolute;
+  top: 41.26px;
+  left: 30.53px;
+  display: inline-block;
+  width: 144.51px;
+  height: 25.73px;
+}
+.fundo-do-resultado {
+  position: absolute;
+  top: 133px;
+  left: 65px;
+  width: 1307px;
+  height: 1307px;
+  color: #323232;
+}
+.fundo-das-opes-de-transp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 48px;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 746px;
+  height: 380px;
+}
+.tiet-div {
+  position: absolute;
+  top: 24px;
+  left: 161px;
+  display: inline-block;
+}
+.novo-rio-div {
+  top: 24px;
+  left: 388px;
+}
+.direto-div,
+.div,
+.h15-div,
+.h45-div,
+.novo-rio-div {
+  position: absolute;
+  display: inline-block;
+}
+.direto-div {
+  top: 17px;
+  left: 287px;
+  font-size: 16px;
+}
+.div,
+.h15-div,
+.h45-div {
+  top: 6px;
+  left: 0;
+}
+.h15-div,
+.h45-div {
+  top: 0;
+  left: 166px;
+  -webkit-text-stroke: 0.5px #486572;
+}
+.h45-div {
+  left: 406px;
+}
+.arrow-icon,
+.dados-volta-div {
+  position: absolute;
+  top: 4.64px;
+  left: 265px;
+  width: 95px;
+  height: 14.73px;
+}
+.dados-volta-div {
+  top: 305px;
+  left: 52px;
+  width: 480px;
+  height: 47px;
+}
+.rio-de-janeiro,
+.so-paulo-div {
+  position: absolute;
+  top: 23px;
+  left: 386px;
+  display: inline-block;
+  width: 124px;
+  height: 16px;
+}
+.so-paulo-div {
+  top: 18px;
+  left: 243px;
+  width: 77px;
+}
+.rodoviria-novo-rio {
+  top: 0;
+  left: 386px;
+  width: 192px;
+  height: 17px;
+}
+.rodoviria-iiet-div,
+.rodoviria-novo-rio,
+.volta-div {
+  position: absolute;
+  display: inline-block;
+}
+.rodoviria-iiet-div {
+  top: 0;
+  left: 198px;
+  width: 167px;
+  height: 17px;
+}
+.volta-div {
+  top: 5px;
+  left: 24px;
+  font-size: 24px;
+  -webkit-text-stroke: 1px #486572;
+}
+.arrow-icon1 {
+  position: absolute;
+  top: -2.05px;
+  left: 334px;
+  width: 32.5px;
+  height: 22.09px;
+}
+.onibus-indo-volta {
+  position: absolute;
+  top: 3px;
+  left: 115px;
+  width: 31px;
+  height: 31px;
+  object-fit: cover;
+}
+.linha-embaixo-cab-volta {
+  position: absolute;
+  top: 67.5px;
+  left: -0.5px;
+  border-top: 1px solid #bbc0cb;
   box-sizing: border-box;
-  font-size: 1.25em;
-  font-family: 'Nanum Gothic';
-  width: 100%;
-  padding: 10px;
+  width: 735.01px;
+  height: 1px;
 }
-
-div.viagem.inlined input {
-  width: 95%;
+.cabealho-volta-div {
+  position: absolute;
+  top: 218px;
+  left: 0;
+  width: 734.01px;
+  height: 68px;
+  font-size: 16px;
+}
+.novo-rio-div1 {
+  position: absolute;
+  top: 24px;
+  left: 197px;
   display: inline-block;
 }
-
-textarea {
-  height: 250px;
+.tiet-div1 {
+  top: 24px;
+  left: 459px;
 }
-
-hr {
-  border: 1px solid grey;
+.direto-div1,
+.div1,
+.h00-div,
+.h30-div,
+.tiet-div1 {
+  position: absolute;
+  display: inline-block;
 }
-
-button {
-  height: 50px;
-  background: #879a8d;
-  border: none;
-  color: white;
-  font-size: 1.25em;
-  font-family: 'Nanum Gothic';
-  border-radius: 4px;
-  cursor: pointer;
-  
+.direto-div1 {
+  top: 17px;
+  left: 338px;
+  font-size: 16px;
 }
-
-button:hover {
-  border: 2px;
-  background-image: linear-gradient( to right, #486572, #a6a6a6, #9b9894, #b79a8d);
+.div1,
+.h00-div,
+.h30-div {
+  top: 5px;
+  left: 52px;
 }
-div.corpo{
-  background-image: linear-gradient( to right, #9b9894, #a6a6a6);
-    color: black;
-    padding: 20px;
-    text-align: center;
-
+.h00-div,
+.h30-div {
+  top: 0;
+  left: 217px;
+  -webkit-text-stroke: 0.5px #486572;
+}
+.h30-div {
+  left: 457px;
+}
+.arrow-icon2 {
+  position: absolute;
+  top: 4.64px;
+  left: 316px;
+  width: 95px;
+  height: 14.73px;
+}
+.linha-embaixo-dos-dados {
+  position: absolute;
+  top: 66.5px;
+  left: -0.5px;
+  border-top: 1px solid #bbc0cb;
+  box-sizing: border-box;
+  width: 735.01px;
+  height: 1px;
+}
+.dados-ida-div {
+  position: absolute;
+  top: 123px;
+  left: 0;
+  width: 734.01px;
+  height: 67px;
+}
+.rodoviria-tiet-div,
+.so-paulo-div1 {
+  position: absolute;
+  top: 23px;
+  left: 392px;
+  display: inline-block;
+  width: 77px;
+  height: 16px;
+}
+.rodoviria-tiet-div {
+  top: 0;
+  width: 140px;
+  height: 17px;
+}
+.rio-de-janeiro1 {
+  top: 23px;
+  left: 219px;
+  width: 113px;
+  height: 17px;
+}
+.ida-div,
+.rio-de-janeiro1,
+.rodoviria-novo-rio1 {
+  position: absolute;
+  display: inline-block;
+}
+.rodoviria-novo-rio1 {
+  top: 0;
+  left: 171px;
+  width: 167px;
+  height: 17px;
+}
+.ida-div {
+  top: 7px;
+  left: 48px;
+  font-size: 24px;
+  -webkit-text-stroke: 1px #486572;
+}
+.linha-embaixo-dos-dados1 {
+  position: absolute;
+  top: 68px;
+  left: -0.5px;
+  border-top: 1px solid #bbc0cb;
+  box-sizing: border-box;
+  width: 735.01px;
+  height: 1px;
+}
+.arrow-icon3,
+.onibus-indo-ida {
+  position: absolute;
+  top: 9.95px;
+  left: 349px;
+  width: 32.5px;
+  height: 22.09px;
+}
+.onibus-indo-ida {
+  top: 9px;
+  left: 115px;
+  width: 31px;
+  height: 31px;
+  object-fit: cover;
+}
+.cabealho-ida-div {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 734.01px;
+  height: 68.5px;
+  font-size: 16px;
+}
+.fundo-div1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 48px;
+  background-color: #486572;
+  width: 185px;
+  height: 380px;
+}
+.em-at-6x {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.no-carto-de {
+  margin: 0;
+}
+.em-at-6x-sem-juros-no-carto {
+  position: absolute;
+  top: 262px;
+  left: 20px;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+}
+.boto-ir-para-site {
+  position: absolute;
+  top: 322px;
+  left: 26px;
+  border-radius: 20px;
+  background-color: #efeae4;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 133px;
+  height: 34px;
+}
+.ir-para-site {
+  position: absolute;
+  top: 329px;
+  left: 57px;
+  font-size: 16px;
+  color: #486572;
+  display: inline-block;
+}
+.taxa-de-servio-r10,
+.total-r-250 {
+  position: absolute;
+  left: 13px;
+  display: inline-block;
+}
+.total-r-250 {
+  top: 218px;
+  font-size: 22px;
+  -webkit-text-stroke: 0.5px #f4f4f4;
+}
+.taxa-de-servio-r10 {
+  top: 176px;
+}
+.taxa-de-embarque-r10 {
+  top: 151px;
+  left: 13px;
+}
+.por-adulto-sem-taxas,
+.r-230-div,
+.taxa-de-embarque-r10 {
+  position: absolute;
+  display: inline-block;
+}
+.por-adulto-sem-taxas {
+  top: 82px;
+  left: 47px;
+  font-size: 18px;
+  text-align: center;
+}
+.r-230-div {
+  top: 33px;
+  left: 44px;
+  font-size: 28px;
+  -webkit-text-stroke: 1px #efeae4;
+}
+.preos-div {
+  position: absolute;
+  top: 0;
+  left: 561px;
+  width: 185px;
+  height: 380px;
+  font-size: 12px;
+  color: #f4f4f4;
+}
+.segundo-resultado-div {
+  position: absolute;
+  top: 1031px;
+  left: 586px;
+  width: 746px;
+  height: 380px;
+}
+.cgh-div,
+.direto-div2,
+.sdu-div {
+  position: absolute;
+  top: 24px;
+  left: 159px;
+  display: inline-block;
+}
+.direto-div2,
+.sdu-div {
+  left: 404px;
+}
+.direto-div2 {
+  top: 17px;
+  left: 281px;
+  font-size: 16px;
+}
+.gol-div,
+.h50-div,
+.h55-div {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  display: inline-block;
+}
+.h50-div,
+.h55-div {
+  top: 0;
+  left: 160px;
+  -webkit-text-stroke: 0.5px #486572;
+}
+.h55-div {
+  left: 400px;
+}
+.arrow-icon4 {
+  position: absolute;
+  top: 4.64px;
+  left: 259px;
+  width: 95px;
+  height: 14.73px;
+}
+.dados-volta-div1 {
+  position: absolute;
+  top: 309px;
+  left: 57px;
+  width: 447px;
+  height: 47px;
+}
+.linha-embaixo-volta {
+  position: absolute;
+  top: 71.5px;
+  left: -0.5px;
+  border-top: 1px solid #bbc0cb;
+  box-sizing: border-box;
+  width: 735.01px;
+  height: 1px;
+}
+.rio-de-janeiro2,
+.so-paulo-div2 {
+  position: absolute;
+  top: 27px;
+  left: 386px;
+  display: inline-block;
+  width: 124px;
+  height: 16px;
+}
+.so-paulo-div2 {
+  left: 225px;
+  width: 77px;
+}
+.sdu-santos-dumont {
+  top: 4px;
+  left: 386px;
+  width: 192px;
+  height: 17px;
+}
+.cgh-congonhas-div,
+.sdu-santos-dumont,
+.volta-div1 {
+  position: absolute;
+  display: inline-block;
+}
+.cgh-congonhas-div {
+  top: 0;
+  left: 167px;
+  width: 167px;
+  height: 17px;
+}
+.volta-div1 {
+  top: 9px;
+  left: 24px;
+  font-size: 24px;
+  -webkit-text-stroke: 1px #486572;
+}
+.arrow-icon5,
+.aviao-subindo-2 {
+  position: absolute;
+  top: 1.95px;
+  left: 334px;
+  width: 32.5px;
+  height: 22.09px;
+}
+.aviao-subindo-2 {
+  top: 2px;
+  left: 117px;
+  width: 33px;
+  height: 33px;
+  object-fit: cover;
+}
+.cabealho-volta-div1 {
+  position: absolute;
+  top: 214px;
+  left: 0;
+  width: 734.01px;
+  height: 72px;
+  font-size: 16px;
+}
+.cgh-div1,
+.gol-div1,
+.sdu-div1 {
+  position: absolute;
+  top: 24px;
+  left: 221px;
+  display: inline-block;
+}
+.cgh-div1,
+.gol-div1 {
+  left: 461px;
+}
+.gol-div1 {
+  top: 12px;
+  left: 57px;
+}
+.dados-ida-div1 {
+  position: absolute;
+  top: 123px;
+  left: 0;
+  width: 734.01px;
+  height: 68px;
+}
+.sdu-santos-dumont1 {
+  position: absolute;
+  top: 3px;
+  left: 167px;
+  display: inline-block;
+  width: 167px;
+  height: 17px;
+}
+.aviao-subindo-1 {
+  position: absolute;
+  top: 10px;
+  left: 117px;
+  width: 33px;
+  height: 33px;
+  object-fit: cover;
+}
+.caixa-dados-voos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 48px;
+  background-color: #a6a6a6;
+  width: 185px;
+  height: 380px;
+}
+.em-at-12x-sem-juros-no-carto {
+  position: absolute;
+  top: 262px;
+  left: 19px;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+}
+.primeiro-resultado-div,
+.rectangle-div1 {
+  position: absolute;
+  top: 615px;
+  left: 586px;
+  width: 746px;
+  height: 380px;
+}
+.rectangle-div1 {
+  top: 0;
+  left: 0;
+  border-radius: 48px;
+  background-color: #486572;
+  width: 332px;
+  height: 164px;
+}
+.h-30m-mdia,
+.mais-barato-div,
+.r-250-div {
+  position: absolute;
+  top: 111px;
+  left: 146px;
+  display: inline-block;
+}
+.mais-barato-div,
+.r-250-div {
+  top: 63px;
+  left: 111px;
+  font-size: 32px;
+}
+.mais-barato-div {
+  top: 24px;
+  left: 72px;
+  font-size: 24px;
+}
+.onibus-branco-2 {
+  position: absolute;
+  top: 91px;
+  left: 57px;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+.balo-2-div,
+.rectangle-div2 {
+  position: absolute;
+  width: 332px;
+  height: 164px;
+}
+.balo-2-div {
+  top: 411px;
+  left: 1004px;
+  color: #fff;
+}
+.rectangle-div2 {
+  top: 0;
+  left: 0;
+  border-radius: 48px;
+  background-color: #a6a6a6;
+}
+.h-55min-mdia,
+.mais-rpido-div,
+.r-700-div {
+  position: absolute;
+  top: 111px;
+  left: 117px;
+  display: inline-block;
+}
+.mais-rpido-div,
+.r-700-div {
+  top: 63px;
+  left: 112px;
+  font-size: 32px;
+}
+.mais-rpido-div {
+  top: 24px;
+  left: 79px;
+  font-size: 24px;
+}
+.avio-branco-1 {
+  position: absolute;
+  top: 111px;
+  left: 35px;
+  width: 51px;
+  height: 31px;
+  object-fit: cover;
+}
+.balo-1-div {
+  position: absolute;
+  top: 411px;
+  left: 590px;
+  width: 332px;
+  height: 164px;
+  color: #fff;
+}
+.ida-div3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  display: inline-block;
+}
+.h00m-div,
+.h00m-div1,
+.madrugada-manh-tarde-no {
+  position: absolute;
+  top: 46px;
+  left: 23px;
+  display: inline-block;
+}
+.h00m-div1,
+.madrugada-manh-tarde-no {
+  left: 301px;
+}
+.madrugada-manh-tarde-no {
+  top: 124px;
+  left: 17px;
+}
+.ida-div2,
+.linha-tempo-ida {
+  position: absolute;
+  top: 82.1px;
+  left: 0;
+  width: 405px;
+  height: 26.8px;
+}
+.ida-div2 {
+  top: 63px;
+  left: 3px;
+  height: 150px;
+}
+.linha-do-tempo-volta,
+.volta-div2 {
+  position: absolute;
+  top: 84px;
+  left: 0;
+  width: 408px;
+  height: 25px;
+}
+.volta-div2 {
+  top: 258px;
+  height: 150px;
+}
+.horrio-div1 {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-size: 24px;
+  display: inline-block;
+  -webkit-text-stroke: 1px rgba(72, 101, 114, 0.8);
+}
+.horrio-div {
+  position: absolute;
+  top: 297px;
+  left: 0;
+  width: 408px;
+  height: 408px;
+  font-size: 22px;
+}
+.rodovirio-div {
+  position: absolute;
+  top: 124px;
+  left: 43px;
+  display: inline-block;
+}
+.rectangle-div3 {
+  position: absolute;
+  top: 122px;
+  left: -2px;
+  border-radius: 5px;
+  background-color: #bbc0cb;
+  border: 2px solid #bbc0cb;
+  box-sizing: border-box;
+  width: 29px;
+  height: 29px;
+}
+.check-branco-2 {
+  position: absolute;
+  top: 123px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+}
+.areo-div {
+  position: absolute;
+  top: 60px;
+  left: 43px;
+  display: inline-block;
+}
+.rectangle-div4 {
+  position: absolute;
+  top: 59px;
+  left: -2px;
+  border-radius: 5px;
+  background-color: #bbc0cb;
+  border: 2px solid #bbc0cb;
+  box-sizing: border-box;
+  width: 29px;
+  height: 29px;
+}
+.check-branco-1 {
+  position: absolute;
+  top: 61px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+}
+.meio-div1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  -webkit-text-stroke: 1px rgba(72, 101, 114, 0.8);
+}
+.filtros-div1,
+.meio-div {
+  position: absolute;
+  left: 3px;
+}
+.meio-div {
+  top: 79px;
+  width: 161px;
+  height: 152px;
+}
+.filtros-div1 {
+  top: 0;
+  display: inline-block;
+  -webkit-text-stroke: 1px #486572;
+}
+.filtros-div {
+  position: absolute;
+  top: 454px;
+  left: 73px;
+  width: 408px;
+  height: 705px;
+  font-size: 24px;
+}
+.destino-div,
+.ida-div4,
+.origem-div,
+.volta-div4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+.destino-div,
+.ida-div4,
+.volta-div4 {
+  left: 269px;
+}
+.ida-div4,
+.volta-div4 {
+  left: 542px;
+}
+.volta-div4 {
+  left: 823px;
+}
+.div2,
+.div3,
+.rio-de-janeiro4,
+.so-paulo-div4 {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  font-size: 24px;
+  color: #323232;
+  display: inline-block;
+}
+.div2,
+.div3,
+.so-paulo-div4 {
+  left: 270px;
+}
+.div2,
+.div3 {
+  left: 542px;
+}
+.div3 {
+  left: 823px;
+}
+.fundo-nova-pesquisa {
+  position: absolute;
+  top: 26px;
+  left: 1025px;
+  border-radius: 48px;
+  background-color: #efeae4;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 198px;
+  height: 47px;
+}
+.nova-pesquisa-div {
+  position: absolute;
+  top: 38px;
+  left: 1053px;
+  color: #486572;
+  display: inline-block;
+}
+.informaes-da-busca {
+  position: absolute;
+  top: 273px;
+  left: 95px;
+  width: 1223px;
+  height: 98px;
+  color: #000;
+}
+.contato-div,
+.menu-div,
+.sobre-ns-div {
+  position: absolute;
+  top: 68px;
+  left: 1243px;
+  display: inline-block;
+}
+.contato-div,
+.sobre-ns-div {
+  left: 815px;
+}
+.sobre-ns-div {
+  left: 961px;
+}
+.ajuda-div,
+.destinos-preferidos-div,
+.trabalhe-conosco-div {
+  position: absolute;
+  top: 68px;
+  left: 1129px;
+  display: inline-block;
+}
+.destinos-preferidos-div,
+.trabalhe-conosco-div {
+  left: 541px;
+}
+.destinos-preferidos-div {
+  left: 251px;
+  display: none;
+}
+.logo-alterado-icon,
+.novo-logo-1 {
+  position: absolute;
+  object-fit: cover;
+}
+.novo-logo-1 {
+  top: -20px;
+  left: 65px;
+  width: 148px;
+  height: 148px;
+  display: none;
+}
+.logo-alterado-icon {
+  top: 25px;
+  left: 0;
+  width: 159px;
+  height: 159px;
+}
+.menu-superior-div {
+  position: absolute;
+  top: -25px;
+  left: 65px;
+  width: 1307px;
+  height: 159px;
+  color: #323232;
+}
+.desktop-1 {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 2000px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 20px;
+  color: #486572;
+  font-family: Tenor Sans;
 }
