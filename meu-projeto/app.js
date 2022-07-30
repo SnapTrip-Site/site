@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var resultadosRouter = require('./routes/resultados');
+var estadiaRotas = require('./routes/estadiaRotas');
+var passagemRotas = require ('./routes/passagemRotas');
 var app = express();
 
 // view engine setup
@@ -20,6 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/resultados', resultadosRouter);
+app.use('/estadias', estadiaRotas);
+app.use('/passagens', passagemRotas);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

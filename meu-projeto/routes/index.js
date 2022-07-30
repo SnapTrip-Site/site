@@ -4,8 +4,24 @@ var router = express.Router();
 
 
 router.get('/', function(req, res, next){
- res.render('snaptrip')
-})
+ res.render('snaptrip');
+});
+
+router.get('/trabalhe', (req, res) => {
+    res.send('Trabalhe Conosco');
+});
+
+router.get('/contato', (req, res) => {
+    res.send('Contatos');
+});
+
+router.get('/sobre', (req, res) => {
+    res.send('Sobre Nós');
+});
+
+router.get('/ajuda', (req, res) => {
+    res.send('Ajuda');
+});
 
 
 
