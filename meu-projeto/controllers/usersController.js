@@ -16,6 +16,8 @@ module.exports = {
         res.redirect('/users/login'); // rediciona para pagina de login.
     },
 
-    login () {},
+    login (req, res) {
+        res.send('Carregar Página de Login!');
+    },
     profile () {},
 };

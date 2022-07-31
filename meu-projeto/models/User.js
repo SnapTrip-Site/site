@@ -1,6 +1,7 @@
 const usersData = require('../data/users.json'); // o Node ja executa o JSON.parse no require, salvando como STRING;
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptsjs');
 
 const usersJSONPath = path.join(__dirname, '../data/users.json');
 
