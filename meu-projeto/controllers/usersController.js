@@ -12,6 +12,7 @@ module.exports = {
             errors.push({msg: 'Login inválido!'}); // Se Usuario estiver errado, manda mensagem ''Login Inválido'');
             return // res.render('colocar pagina de register EJS', {errors, user}) ---- Futuramente trocar o send pelo render, e renderizar pagina de register novamente..
         }
+        
         user.save(user); // se esvier tudo certo com o register, ele salva.
         res.redirect('/users/login'); // rediciona para pagina de login.
     },
