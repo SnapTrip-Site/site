@@ -2,7 +2,7 @@ const User = require('../models/User');
 
 module.exports = {
     register (req, res) {
-        res.send('resultados',);// colocar depois da , { errors: []};  // Alterar o send para render quando tiver  a pagina de register EJS;
+        res.render('userForm', {errors: []});
     },
     save (req, res) {
         const user = req.body; // Receber o usuario digitado no register;
@@ -10,15 +10,15 @@ module.exports = {
 
         if(!user.name && !user.password) {
             errors.push({msg: 'Registro inválido!'}); // Se Usuario estiver errado, manda mensagem ''Login Inválido'');
-            return // res.render('colocar pagina de register EJS', {errors, user}) ---- Futuramente trocar o send pelo render, e renderizar pagina de register novamente..
+            return res.render('userForm', {errors, user});
         }
         // delete user.re_password; // usar caso tenha ''Repetir a senha'' no formulario de registro.
-        user.save(user); // se esvier tudo certo com o register, ele salva.
+        User.save(user); // se esvier tudo certo com o register, ele salva.
         res.redirect('/users/login'); // rediciona para pagina de login.
     },
 
     login (req, res) {
-        res.send('Carregar Página de Login!');
+        res.render('userForm');
     },
 
     auth (req, res) {
@@ -29,19 +29,19 @@ module.exports = {
 
         if(!userFound) {  // SE, não achar o email, manda mensagem de login inválido e volta para pagina de login.
             errors.push({msg: 'Login Inválido!'});
-            return // res.render('colocar pagina de login EJS', {errors, userReceived}) ---- Futuramente trocar o send pelo render, e renderizar pagina de login novamente..
+            return res.render('userForm', {errors, userReceived});
         }
 
-        const samePassword = User.comparePassword(userReceived.password);
+        const samePassword = User.comparePassword(userReceived.password, userFound.password);
             // Comparando se a senha criptografada é a mesma que foi recebida pelo body;
         if(!samePassword) { // Se não fora mesma senha, volta para página de login!
             errors.push({msg: 'Senha Inválido!'});
-            return // res.render('colocar pagina de login EJS', {errors, userReceived}) ---- Futuramente trocar o send pelo render, e renderizar pagina de login novamente..
+            return res.render('userForm', {errors, userReceived});
         }
 
-        req.session.usuario = userReceived; // se tudo for ok, cadastra o usuario na sessão;
+       // req.session.usuario = userFound; // se tudo for ok, cadastra o usuario na sessão;
 
-        return res.redirect('/users/profile'); // rediciona o usuario para a página bloqueada, que só logado pode acessar, normalmente, profile.
+        return res.send('Sucesso'); // rediciona o usuario para a página bloqueada, que só logado pode acessar, normalmente, profile.
     },
 
     profile () {},
