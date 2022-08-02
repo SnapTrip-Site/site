@@ -128,9 +128,6 @@
             <div class="dentro-caixa" id="cartao">
                 <div class="cartao-front">
                     <h2>LOGIN</h2>
-                    <% errors.forEach(error => { %>
-                        <h3><%= error.msg %> </h3>
-                    <% }) %>
                     <form method="POST" action="/users/login">
                         <input name="email" type="email" class="input-caixa" placeholder="Email" required>
                         <input name="password" type="password" class="input-caixa" placeholder="Senha" required>
