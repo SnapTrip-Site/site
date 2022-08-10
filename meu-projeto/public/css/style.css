@@ -1349,3 +1349,70 @@ body {
   color: #486572;
   font-family: Tenor Sans;
 }
+
+
+
+div.viagem {
+  margin: 10px 0;
+  background-image: linear-gradient( to right, #9b9894, #a6a6a6);
+}
+
+div.viagem.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 10px;
+}
+
+div.viagem.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px solid grey;
+}
+
+button {
+  height: 50px;
+  background: #879a8d;
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  border: 2px;
+  background-image: linear-gradient( to right, #486572, #a6a6a6, #9b9894, #b79a8d);
+}
+div.corpo{
+  background-image: linear-gradient( to right, #9b9894, #a6a6a6);
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
