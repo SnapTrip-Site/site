@@ -1,5 +1,5 @@
 var express = require('express');
-var trabalheConoscoController = require(':/controllers/trabalheconosco')
+var trabalheConoscoController = require(':/controllers/trabalheConoscoController')
 var router = express.Router();
 
 /* GET home page. */
