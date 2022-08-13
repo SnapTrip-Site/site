@@ -12,6 +12,8 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  backdrop-filter: blur(15.3px);
+  -webkit-backdrop-filter: blur(15.3px);
 }
 .header{
   min-height: 100vh;
@@ -19,6 +21,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  z-index: 1;
 }
 nav{
   display: flex;
@@ -36,6 +39,7 @@ nav img{
   text-align: right;
   padding-left: 450px;
 }
+
 .nav-links ul li{
   list-style: none;
   display: inline-block;
@@ -47,6 +51,12 @@ nav img{
   text-decoration: none;
   font-size: 13px ;
 }
+
+
+.header-links  ul li a{
+  color: #f6f6f6;
+}
+
 .nav-links ul li::after{
   content: '';
   width: 0%;
@@ -61,14 +71,15 @@ nav img{
 
 }
 .text-box{
-  width: 90%;
+  width: 100%;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,50%);
-  text-align: center;
-
+  top: 0;
+  z-index: 0;
 }
 .text-box h1{
   font-size: 62px;
@@ -361,6 +372,19 @@ h3{
   color: #efefef;
   margin-bottom: 10px;
 }
+
+.formulario {
+  /* From https://css.glass */
+  margin-top: 200px;
+  width: 60%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 form input{
   width: 400px;
   height: 45px;
@@ -1354,7 +1378,7 @@ body {
 
 div.viagem {
   margin: 10px 0;
-  background-image: linear-gradient( to right, #9b9894, #a6a6a6);
+  /* background-image: linear-gradient( to right, #9b9894, #a6a6a6); */
 }
 
 div.viagem.inlined {
@@ -1410,8 +1434,10 @@ button:hover {
   background-image: linear-gradient( to right, #486572, #a6a6a6, #9b9894, #b79a8d);
 }
 div.corpo{
-  background-image: linear-gradient( to right, #9b9894, #a6a6a6);
-    color: black;
+  /* background-image: linear-gradient( to right, #9b9894, #a6a6a6); */
+    color: white;
     padding: 20px;
     text-align: center;
+    text-transform: uppercase;
+    
 }
