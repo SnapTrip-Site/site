@@ -3,3 +3,4 @@ const trabalheConosco = {
         res.send ('Trabalhe conosco!')
 }
 }
+module.exports = trabalheConosco;
