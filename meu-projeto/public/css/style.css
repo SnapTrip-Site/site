@@ -8,7 +8,7 @@
 .header-PaginaPrincipal{
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(https://c8y3s8d4.stackpathcdn.com/wp-content/uploads/2015/06/aviao-orlando.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(meu-projeto\public\img\home-background.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -43,7 +43,7 @@ nav img{
   position: relative;
 }
 .nav-links ul li a{
-  color: rgb(67, 111, 151);
+  color: #486572;
   text-decoration: none;
   font-size: 13px ;
 }
@@ -51,7 +51,7 @@ nav img{
   content: '';
   width: 0%;
   height: 2px;
-  background: #b79a8d;
+  background: #B79A8D;
   display: block;
   margin: auto;
   transition: 0.5s;
@@ -91,8 +91,8 @@ nav img{
   cursor: pointer;
 }
 .hero-btn:hover{
-  border: 1px solid #b79a8d;
-  background: #b79a8d;
+  border: 1px solid #B79A8D;
+  background: #B79A8D;
   transition: 1s;
 }
 nav .fa{
@@ -109,7 +109,7 @@ nav .fa{
   }
   .nav-links{
       position: absolute;
-      background: #b79a8d;
+      background: #B79A8D;
       height: 100vh;
       width: 200px;
       top: 0;
@@ -144,7 +144,7 @@ h1{
 
 }
 p{
-  color: #777;
+  color: #486572;
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
@@ -170,7 +170,7 @@ h3{
   margin: 10px 0;
 }
 .course-coluna:hover{
-  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px 0px #323232;
 }
 @media(max-width: 700px){
   .rox{
