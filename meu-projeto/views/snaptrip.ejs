@@ -1,27 +1,35 @@
 
 
-    <%- include('partials/header') %> 
+    <%- include('partials/headerHome') %> 
+
+    <div class="text-box header-PaginaPrincipal">
+        <!-- <h1>Maior Agência</h1>
+        <p>
+           Com a Snaptrip, viajar comercialmente nunca foi tão facil.<br>Em apenas alguns cliques, encontre as melhores opções de passagem e hospedagem.
+        </p>
+        <a href="" class="hero-btn">Visite para conhecer mais.</a> -->
+  
 
         <!--Formulario -->
 
-        <Section class="formulario">
+        <section class="formulario">
             <div class="corpo">
                 <form action="reservation.php" method="post">
                    <div class="viagem">
                       <label for="origem">origem</label>
-                      <input type="text" id="origem" name="visitor_origem" placeholder="São Paulo" required>
+                      <input type="text" id="Origem" name="visitor_origem" placeholder="Rio de Janeiro" required>
                     </div>
                     <div class="viagem">
                       <label for="Destino">Destino</label>
-                      <input type="text" id="Destino" name="visitor_destino" placeholder="Rio Grande Do Sul" required>
+                      <input type="text" id="Destino" name="visitor_destino" placeholder="São Paulo" required>
                     </div>
                     <div class="viagem">
                       <label for="transporte">transporte</label>
-                      <input type="text" id="transporte" name="visitor_transporte" placeholder="uber">
+                      <input type="text" id="Transporte" name="visitor_transporte" placeholder="uber">
                     </div>
                     <hr>
                     <div class="viagem inlined">
-                      <label for="ida">data de ida</label>
+                      <label for="Ida">data de ida</label>
                       <input type="date" id="data de ida" name="data de ida" required>
                     </div>
                     <div class="viagem inlined">
@@ -43,7 +51,8 @@
                   </div>
                   </form>
 
-        </Section>
+        </section>
+    </div>
 
 <!----Pacotes de viagem ----->
 
@@ -79,11 +88,13 @@
             <img src="/img/london.png">
             <div class="layer">
                 <h3>LONDON</h3>
+                </div>
         </div>
         <div class="locais-coluna">
             <img src="/img/newyork.png">
             <div class="layer">
                 <h3>NEW YORK</h3>
+                </div>
         </div>
         <div class="locais-coluna">
             <img src="/img/washington.png">
@@ -97,7 +108,7 @@
 <!--- Sistema -->
 
 <section class="sistema">
-        <h1>Nossos Sistema Fornece</h1>
+        <h1>Nosso Sistema Fornece</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eaque similique placeat eius illum! Nulla nostrum laborum incidunt</p>
 
     <div class="row">

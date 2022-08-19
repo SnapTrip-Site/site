@@ -28,7 +28,6 @@
             height: 100%;
             transform-style: preserve-3d;
             transition: transform 1s;
-
         }
         .cartao-front, .cartao-back{
             position: absolute;
@@ -40,7 +39,6 @@
             padding: 55px;
             box-sizing: border-box;
             backface-visibility: hidden;
-
         }
         .cartao-back{
             transform: rotateY(180deg);
@@ -50,7 +48,6 @@
             font-size: 24px;
             text-align: center;
             margin-bottom: 20px;
-
         }
         .input-caixa{
             width: 100%;
@@ -64,8 +61,6 @@
             outline: none;
             text-align: center;
             color: #fff;
-
-
         }
         ::placeholder{
             color: #fff;
@@ -100,16 +95,13 @@
             position: absolute;
             right: -1px;
             top: -1px;
-
         }
         span{
             font-size: 13px;
             margin-left: 10px;
-
         }
         .cartao .btn{
             margin-top: 70px;
-
         }
         .cartao a{
             color: #fff;
@@ -118,7 +110,6 @@
             text-align: center;
             font-size: 13px;
             margin-top: 8px;
-
         }
     </style>
 </head>
@@ -128,15 +119,9 @@
             <div class="dentro-caixa" id="cartao">
                 <div class="cartao-front">
                     <h2>LOGIN</h2>
-<<<<<<< HEAD
-                    <% errors.forEach(error => { %>
-                        <h3><%= error.msg %> </h3>
-                    <% }) %>
-=======
->>>>>>> 4f76fb66d7190887699ce3874f090adc28a9bfb8
-                    <form method="POST" action="/users/login">
-                        <input name="email" type="email" class="input-caixa" placeholder="Email" required>
-                        <input name="password" type="password" class="input-caixa" placeholder="Senha" required>
+                    <form>
+                        <input type="email" class="input-caixa" placeholder="Email" required>
+                        <input type="password" class="input-caixa" placeholder="Senha" required>
                         <button type="submit" class="enviar-btn">Enviar</button>
                         <input type="checkbox"><span>Lembrar de mim</span>
                     </form>
@@ -144,10 +129,10 @@
                     <a href="">Esqueci minha Senha</a>
                 </div>
                 <div class="cartao-back"><h2>REGISTRE-SE</h2>
-                    <form method="POST" action="/users/register">
-                        <input type="text" name="name" class="input-caixa" placeholder="Seu Nome" required>
-                        <input type="email" name="email" class="input-caixa" placeholder="Email" required>
-                        <input type="password" name="password"  class="input-caixa" placeholder="Senha" required>
+                    <form>
+                        <input type="text" class="input-caixa" placeholder="Seu Nome" required>
+                        <input type="email" class="input-caixa" placeholder="Email" required>
+                        <input type="password" class="input-caixa" placeholder="Senha" required>
                         <button type="submit" class="enviar-btn">Enviar</button>
                         <input type="checkbox"><span>Lembrar de mim</span>
                     </form>
