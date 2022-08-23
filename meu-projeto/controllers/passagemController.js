@@ -5,7 +5,7 @@ const PassagemController = {
        const origem = req.query.origem;
        var passagens = Passagem.filter(origem, destino)
        console.log(passagens);
-       res.render('resultados',{passagens});
+       res.render('passagens',{passagens});
     },
     find (req, res) {},
     store (req, res) {},
