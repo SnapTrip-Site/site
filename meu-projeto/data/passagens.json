@@ -1,0 +1,25 @@
+[{
+    "id":1,
+    "idTransporte":2,
+    "horaPartida":"15:30",
+    "tipoTransporte":"Avião",
+    "origem":"Tunápolis",
+    "destino":"Florianópolis"
+},
+{
+    "id":2,
+    "idTransporte":3,
+    "horaPartida":"15:30",
+    "tipoTransporte":"Avião",
+    "origem":"Tunápolis",
+    "destino":"Florianópolis"
+},
+{
+    "id":3,
+    "idTransporte":2,
+    "horaPartida":"15:30",
+    "tipoTransporte":"Avião",
+    "origem":"Tunápolis",
+    "destino":"Florianópolis"
+}
+]
