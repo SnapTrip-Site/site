@@ -44,5 +44,6 @@ module.exports = {
         return res.send('Sucesso'); // rediciona o usuario para a página bloqueada, que só logado pode acessar, normalmente, profile.
     },
 
-    profile () {},
+    profile (req, res) {},
+    index (req, res) {},
 };
