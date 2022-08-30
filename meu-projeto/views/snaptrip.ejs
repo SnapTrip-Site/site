@@ -2,8 +2,7 @@
 
     <%- include('partials/header') %> 
 
-    <div class="text-box">
-        <img src="../public/img/home-background.jpg" alt="viagem">
+    <div class="text-box header-PaginaPrincipal">
         <h1>Maior Agência</h1>
         <p>
            Com a Snaptrip, viajar comercialmente nunca foi tão facil.<br>Em apenas alguns cliques, encontre as melhores opções de passagem e hospedagem.
@@ -13,9 +12,9 @@
 
         <!--Formulario -->
 
-        <Section class="formulario">
+        <section class="formulario">
             <div class="corpo">
-                <form action="reservation.php" method="post">
+                <form action="reservation.php" method="POST">
                    <div class="viagem">
                       <label for="origem">origem</label>
                       <input type="text" id="Origem" name="visitor_origem" placeholder="Rio de Janeiro" required>
@@ -52,7 +51,7 @@
                   </div>
                   </form>
 
-        </Section>
+        </section>
 
 <!----Pacotes de viagem ----->
 
@@ -88,11 +87,13 @@
             <img src="/img/london.png">
             <div class="layer">
                 <h3>LONDON</h3>
+                </div>
         </div>
         <div class="locais-coluna">
             <img src="/img/newyork.png">
             <div class="layer">
                 <h3>NEW YORK</h3>
+                </div>
         </div>
         <div class="locais-coluna">
             <img src="/img/washington.png">
@@ -173,7 +174,7 @@
 
 <section class="cta">
     <h1>Agende suas viagens <br> De Qualquer Lugar do Mundo</h1>
-    <a href="" class="hero-btn">ENTRE EM CONTATO</a>
+    <a href="/contato" class="hero-btn">ENTRE EM CONTATO</a>
 </section>
 <!--Footer-->
 <%- include('partials/footer') %> 

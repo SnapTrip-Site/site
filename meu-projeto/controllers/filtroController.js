@@ -1,4 +1,4 @@
-const PassagemController = {
+const filtroController = {
     index: (req, res) => {
         res.send('Filtro')
     },

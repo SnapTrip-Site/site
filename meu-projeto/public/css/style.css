@@ -8,7 +8,7 @@
 .header-PaginaPrincipal{
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(meu-projeto\public\img\home-background.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(/img/plane-background.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -307,7 +307,7 @@ h3{
 .cta{
   margin: 100px auto;
   width: 80%;
-  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/snapTrip/img/banner2.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/img/banner2.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 10px;
@@ -1347,7 +1347,7 @@ body {
   text-align: left;
   font-size: 20px;
   color: #486572;
-  font-family: Tenor Sans;
+  font-family:  TenorSans;
 }
 
 
@@ -1360,13 +1360,12 @@ div.viagem {
 div.viagem.inlined {
   width: 49%;
   display: inline-block;
-  float: left;
   margin-left: 1%;
 }
 
 label {
   display: block;
-  font-family: 'Nanum Gothic';
+  font-family: 'TenorSans';
   padding-bottom: 10px;
   font-size: 1.25em;
 }
@@ -1376,7 +1375,7 @@ input, select, textarea {
   border: 2px solid #777;
   box-sizing: border-box;
   font-size: 1.25em;
-  font-family: 'Nanum Gothic';
+  font-family: 'TenorSans';
   width: 100%;
   padding: 10px;
 }
@@ -1400,7 +1399,7 @@ button {
   border: none;
   color: white;
   font-size: 1.25em;
-  font-family: 'Nanum Gothic';
+  font-family: 'TenorSans';
   border-radius: 4px;
   cursor: pointer;
   
