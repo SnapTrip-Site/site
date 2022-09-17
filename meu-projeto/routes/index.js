@@ -1,11 +1,10 @@
 var express = require('express');
+const homeController = require('../controllers/homeController');
 var router = express.Router();
 
 
 
-router.get('/', function(req, res, next){
- res.render('snaptrip');
-});
+router.get('/', homeController.index);
 
 router.get('/trabalhe', (req, res) => {
     res.render('trabalheConosco');

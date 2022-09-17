@@ -21,7 +21,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  z-index: 1;
+
 }
 nav{
   display: flex;
@@ -38,6 +38,7 @@ nav img{
   flex: 1;
   text-align: right;
   padding-left: 450px;
+  z-index: 1;
 }
 
 .nav-links ul li{
@@ -1394,7 +1395,7 @@ label {
   font-size: 1.25em;
 }
 
-input, select, textarea {
+select, textarea {
   border-radius: 2px;
   border: 2px solid #777;
   box-sizing: border-box;
