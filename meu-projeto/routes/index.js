@@ -1,11 +1,12 @@
 var express = require('express');
+const homeController = require('../controllers/homeController');
 var router = express.Router();
 
+const transporteEstadia = require("../controllers/estadiaController");
+const EstadiaController = require('../controllers/estadiaController');
 
 
-router.get('/', function(req, res, next){
- res.render('snaptrip');
-});
+router.get('/', homeController.index);
 
 router.get('/trabalhe', (req, res) => {
     res.render('trabalheConosco');
@@ -23,6 +24,6 @@ router.get('/ajuda', (req, res) => {
     res.send('Ajuda');
 });
 
-
+router.get("/estadias", EstadiaController.index);
 
 module.exports = router

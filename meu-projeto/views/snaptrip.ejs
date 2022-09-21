@@ -16,12 +16,21 @@
             <div class="corpo">
                 <form action="reservation.php" method="POST">
                    <div class="viagem">
-                      <label for="origem">origem</label>
-                      <input type="text" id="Origem" name="visitor_origem" placeholder="Rio de Janeiro" required>
+                    <label for="Origem">Origem</label>
+                      <select name="visitor_origem" id="Origem">
+                        <% cidades.map(element => { %>
+                             <option value="<% element.nome %> "><%= element.nome %></option>
+                           <% }) %> 
+                      </select>
+        
                     </div>
                     <div class="viagem">
                       <label for="Destino">Destino</label>
-                      <input type="text" id="Destino" name="visitor_destino" placeholder="São Paulo" required>
+                      <select name="visitor_origem" id="Destino">
+                        <% cidades.map(element => { %>
+                             <option value="<% element.nome %> "><%= element.nome %></option>
+                           <% }) %> 
+                      </select>
                     </div>
                     <div class="viagem">
                       <label for="transporte">transporte</label>
@@ -46,8 +55,10 @@
                     <div class="viagem">
                      
                     </div>
-                    <button type="submit">Procurar</button>
-                
+                  <button type="submit">Procurar</button>
+                  
+                  
+
                   </div>
                   </form>
 
