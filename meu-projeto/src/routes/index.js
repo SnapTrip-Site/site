@@ -8,7 +8,7 @@ router.get('/', function(req, res, next){
 });
 
 router.get('/trabalhe', (req, res) => {
-    res.send('Trabalhe Conosco');
+    res.render('trabalheConosco');
 });
 
 router.get('/contato', (req, res) => {

@@ -1,49 +1,59 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device initial-scale=1.0">
-        <title>SnapTrip</title>
-        <link rel="stylesheet" href="../public/css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
-    </head>
-    <body>
-        <section class="header-PaginaPrincipal">
-            <nav>
-                <a href="/snapTrip/snapTrip.html"><img src="../public/img/logo-alterado@2x.png" ></a>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li><a href="http://127.0.0.1:5500/site/meu-projeto/snaptrip/snapTrip.html">HOME</a></li>
-                        <li><a href="?">SOBRE NÓS</a></li>
-                        <li><a href="?">TRABALHE CONOSCO</a></li>
-                        <li><a href="http://127.0.0.1:5500/site/meu-projeto/snaptrip/Estadia.html">PASSAGENS</a></li>
-                        <li><a href="?">CONTACTO</a></li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
 
-            </nav>
-            <div class="text-box">
-                <h1>Maior Agência</h1>
-                <p>
-                   Agora,com a Snaptrip viajar comercialmente nunca ficou taão facil.<br>Em apenas alguns cliques, agende uma passagem para sua empresa .
-                </p>
-                <a href="" class="hero-btn">Visite para conhecer mais</a>
-            </div>
 
-        </section>
+    <%- include('partials/headerHome') %> 
 
-<<<<<<< HEAD
+    <div class="text-box header-PaginaPrincipal">
+        <!-- <h1>Maior Agência</h1>
+        <p>
+           Com a Snaptrip, viajar comercialmente nunca foi tão facil.<br>Em apenas alguns cliques, encontre as melhores opções de passagem e hospedagem.
+        </p>
+        <a href="" class="hero-btn">Visite para conhecer mais.</a> -->
+  
+
         <!--Formulario -->
 
+        <section class="formulario">
+            <div class="corpo">
+                <form action="reservation.php" method="POST">
+                   <div class="viagem">
+                      <label for="origem">origem</label>
+                      <input type="text" id="Origem" name="visitor_origem" placeholder="Rio de Janeiro" required>
+                    </div>
+                    <div class="viagem">
+                      <label for="Destino">Destino</label>
+                      <input type="text" id="Destino" name="visitor_destino" placeholder="São Paulo" required>
+                    </div>
+                    <div class="viagem">
+                      <label for="transporte">transporte</label>
+                      <input type="text" id="Transporte" name="visitor_transporte" placeholder="avião">
+                    </div>
+                    <hr>
+                    <div class="viagem inlined">
+                      <label for="Ida">data de ida</label>
+                      <input type="date" id="data de ida" name="data de ida" required>
+                    </div>
+                    <div class="viagem inlined">
+                      <label for="data de volta">data de volta</label>
+                      <input type="date" id="data de volta" name="data de volta" required>
+                    </div>
+                      <div class="viagem">
+                        <label for="origem">Local do evento</label>
+                        <input type="text" id="Local do evento" name="visitor_Local do evento" placeholder="Evento" required>
+                         
+                      </select>
+                    </div>
+                    <hr>
+                    <div class="viagem">
+                     
+                    </div>
+                    <button type="submit">Procurar</button>
+                
+                  </div>
+                  </form>
 
+        </section>
+    </div>
 
-=======
-       
->>>>>>> 4bdab7cb2bec9897989061c0a3377d2857938682
 <!----Pacotes de viagem ----->
 
 <section class="course">
@@ -73,33 +83,23 @@
 <section class="locais">
     <h1>Nossos Locais Mais Procurados</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eaque similique placeat eius illum! Nulla nostrum laborum incidunt.</p>
-
-      <div>
-                <div class="row">
-                    <div class="locais-coluna">
-                        <img src="../public/img/london.png">
-                        <div class="layer">
-                            <h3>LONDON</h3>
-                        </div>
-                    </div>
-            </div>
-        
-            <div class="row">
-                <div class="locais-coluna">
-                    <img src="../public/img/newyork.png">
-                    <div class="layer">
-                        <h3>NOVA IORQUE</h3>
-                    </div>
+    <div class="row">
+        <div class="locais-coluna">
+            <img src="/img/london.png">
+            <div class="layer">
+                <h3>LONDON</h3>
                 </div>
         </div>
-   
-                <div class="row">
-                    <div class="locais-coluna">
-                        <img src="../public/img/washington.png">
-                        <div class="layer">
-                            <h3>washington</h3>
-                        </div>
-                    </div>
+        <div class="locais-coluna">
+            <img src="/img/newyork.png">
+            <div class="layer">
+                <h3>NEW YORK</h3>
+                </div>
+        </div>
+        <div class="locais-coluna">
+            <img src="/img/washington.png">
+            <div class="layer">
+                <h3>WASHINGTON</h3>
             </div>
         </div>
     </div>
@@ -108,7 +108,7 @@
 <!--- Sistema -->
 
 <section class="sistema">
-        <h1>Nossos Sistema Fornece</h1>
+        <h1>Nosso Sistema Fornece</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eaque similique placeat eius illum! Nulla nostrum laborum incidunt</p>
 
     <div class="row">
@@ -143,7 +143,7 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eaque similique placeat eius illum! Nulla nostrum laborum incidunt</p>
     <div class="row">
         <div class="testimonaials-col">
-            <img src="/snapTrip/img/user1.jpg" alt="">
+            <img src="/img/user1.jpg" alt="">
             <div>
                 <p> ipsum dolor sit amet, consectetur adipisicing elit. Nisi culpa quibusdam vitae recusandae? Aperiam, eaque libero similique repellat quaerat assumenda, necessitatibus et voluptate nam illo iure nihil obcaecati sed. Animi?</p>
                 <h3>Christina Gouvêa</h3>
@@ -156,7 +156,7 @@
             </div>
         </div>
         <div class="testimonaials-col">
-            <img src="/snapTrip/img/user2.jpg" alt="">
+            <img src="/img/user2.jpg" alt="">
             <div>
                 <p> ipsum dolor sit amet, consectetur adipisicing elit. Nisi culpa quibusdam vitae recusandae? Aperiam, eaque libero similique repellat quaerat assumenda, necessitatibus et voluptate nam illo iure nihil obcaecati sed. Animi?</p>
                 <h3>Vitor Andrade</h3>
@@ -175,33 +175,7 @@
 
 <section class="cta">
     <h1>Agende suas viagens <br> De Qualquer Lugar do Mundo</h1>
-    <a href="" class="hero-btn">ENTRE EM CONTATO</a>
+    <a href="/contato" class="hero-btn">ENTRE EM CONTATO</a>
 </section>
 <!--Footer-->
-<section class="footer">
-    <h4>Sobre Nós</h4>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos velit nemo non maiores impedit eaque rem  <br> et quae vero asperiores, nulla doloremque  praesentium perspiciatis adipisci quas nobis doloribus, ducimus nesciunt.</p>
-    <div class="icones">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-linkdin"></i>
-
-    </div>
-  
-</section>
-
-<!---------JavaScript pra abrir o menu ----->
-
-        <script>
-            var navLinks = document.getElementById("navLinks");
-
-            function showMenu(){
-                navLinks.style.right = "0";
-            }
-            function hideMenu(){
-                navLinks.style.right = "-200px";
-            }
-        </script>
-    </body>
-</html>
+<%- include('partials/footer') %> 

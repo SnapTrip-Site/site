@@ -1371,7 +1371,7 @@ body {
   text-align: left;
   font-size: 20px;
   color: #486572;
-  font-family: Tenor Sans;
+  font-family:  TenorSans;
 }
 
 
@@ -1389,7 +1389,7 @@ div.viagem.inlined {
 
 label {
   display: block;
-  font-family: 'Nanum Gothic';
+  font-family: 'TenorSans';
   padding-bottom: 10px;
   font-size: 1.25em;
 }
@@ -1399,7 +1399,7 @@ input, select, textarea {
   border: 2px solid #777;
   box-sizing: border-box;
   font-size: 1.25em;
-  font-family: 'Nanum Gothic';
+  font-family: 'TenorSans';
   width: 100%;
   padding: 10px;
 }
@@ -1423,7 +1423,7 @@ button {
   border: none;
   color: white;
   font-size: 1.25em;
-  font-family: 'Nanum Gothic';
+  font-family: 'TenorSans';
   border-radius: 4px;
   cursor: pointer;
   
@@ -1440,4 +1440,52 @@ div.corpo{
     text-align: center;
     text-transform: uppercase;
     
+}
+
+/*---- Trabalhe conosco ----*/
+.sub-header{
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(http://images.virgula.com.br/2016/06/aeromo%C3%A7aaas.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff
+
+}
+
+.sub-header h1{
+  margin-top: 100px;
+}
+
+.trabalhe-conosco{
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.trab-col{
+  flex-basis: 48%;
+  padding:30px 2px;
+
+}
+.trab-col img{
+  width: 100%;
+}
+
+.trab-col h1{
+  padding-top: 0;
+}
+.trab-col p{
+  padding: 15px 0 25px;
+}
+
+.red-btn{
+  border: 1px solid #f44336;
+  background: transparent;
+  color: #f44336;
+}
+.red-btn:hover{
+  color:#fff;
 }

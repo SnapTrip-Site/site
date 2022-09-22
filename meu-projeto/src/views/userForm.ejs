@@ -10,7 +10,7 @@
             width: 100%;
             height: 100vh;
             font-family: sans-serif;
-            background: rgb(187, 187, 254);
+            background: #223550;
             color: #fff;
             display: flex;
             align-items: center;
@@ -128,9 +128,9 @@
             <div class="dentro-caixa" id="cartao">
                 <div class="cartao-front">
                     <h2>LOGIN</h2>
-                    <form>
-                        <input type="email" class="input-caixa" placeholder="Email" required>
-                        <input type="password" class="input-caixa" placeholder="Senha" required>
+                    <form method="POST" action="/users/login">
+                        <input name="email" type="email" class="input-caixa" placeholder="Email" required>
+                        <input name="password" type="password" class="input-caixa" placeholder="Senha" required>
                         <button type="submit" class="enviar-btn">Enviar</button>
                         <input type="checkbox"><span>Lembrar de mim</span>
                     </form>
@@ -138,10 +138,10 @@
                     <a href="">Esqueci minha Senha</a>
                 </div>
                 <div class="cartao-back"><h2>REGISTRE-SE</h2>
-                    <form>
-                        <input type="text" class="input-caixa" placeholder="Seu Nome" required>
-                        <input type="email" class="input-caixa" placeholder="Email" required>
-                        <input type="password" class="input-caixa" placeholder="Senha" required>
+                    <form method="POST" action="/users/register">
+                        <input type="text" name="name" class="input-caixa" placeholder="Seu Nome" required>
+                        <input type="email" name="email" class="input-caixa" placeholder="Email" required>
+                        <input type="password" name="password"  class="input-caixa" placeholder="Senha" required>
                         <button type="submit" class="enviar-btn">Enviar</button>
                         <input type="checkbox"><span>Lembrar de mim</span>
                     </form>

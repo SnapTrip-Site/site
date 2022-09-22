@@ -39,12 +39,11 @@ module.exports = {
             return res.render('userForm', {errors, userReceived});
         }
 
-       // req.session.usuario = userFound; // se tudo for ok, cadastra o usuario na sessão;
        // req.session.usuario = userReceived; // se tudo for ok, cadastra o usuario na sessão;
-
 
         return res.send('Sucesso'); // rediciona o usuario para a página bloqueada, que só logado pode acessar, normalmente, profile.
     },
 
-    profile () {},
+    profile (req, res) {},
+    index (req, res) {},
 };

@@ -16,4 +16,5 @@ router.post('/login', usersController.auth);
 /* GET - /users/profile */
 router.get('/profile', usersController.profile);
 
+router.get("/", usersController.index)
 module.exports = router;
