@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Poppins ', sans-serif; 
+  font-family: 'Tenor Sans', sans-serif; 
   box-sizing: border-box;
 }
 
@@ -50,7 +50,7 @@ nav img{
 .nav-links ul li a{
   color: #486572;
   text-decoration: none;
-  font-size: 13px ;
+  font-size: 16px ;
 }
 
 
@@ -1372,7 +1372,7 @@ body {
   text-align: left;
   font-size: 20px;
   color: #486572;
-  font-family:  TenorSans;
+  font-family:  'Tenor Sans', sans-serif;
 }
 
 
@@ -1389,7 +1389,7 @@ div.viagem {
 
 label {
   display: block;
-  font-family: 'TenorSans';
+  font-family: 'Tenor Sans', sans-serif;
   padding-bottom: 10px;
   font-size: 1.25em;
 }
@@ -1399,9 +1399,9 @@ select, textarea {
   border: 2px solid #777;
   box-sizing: border-box;
   font-size: 1.25em;
-  font-family: 'TenorSans';
-  width: 50%;
-  padding: 5px;
+  font-family: 'Tenor Sans', sans-serif;
+  width: 100%;
+  padding: 10px;
 }
 
 div.viagem.inlined input {
@@ -1423,7 +1423,7 @@ button {
   border: none;
   color: white;
   font-size: 1.25em;
-  font-family: 'TenorSans';
+  font-family: 'Tenor Sans', sans-serif;
   border-radius: 4px;
   cursor: pointer;
   
