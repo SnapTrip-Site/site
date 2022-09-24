@@ -1496,3 +1496,76 @@ div.corpo{
 .red-btn:hover{
   color:#fff;
 }
+
+
+/*estruturação do formulario inteiro*/
+.header-form{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 25px;
+  width: 800px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: absolute; 
+left: 250px; 
+top: 70px; 
+  height: 285px;
+}
+/* titulo do forumulario */
+
+.header-form h2{
+  color: whitesmoke;
+}
+
+/* estilização dos campos do formulario */
+.form-control, .form-contro2, .form-contro3 {
+  border: 1px solid white;
+  width: 640px;
+  height: 40px;
+  margin: 10px 10px 0px 10px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+  color: rgba(4,9,30,0.7);
+  
+}
+
+.form-contro2{
+  width: 644px;
+}
+
+.flex input[type ="submit"]{
+  padding: 10px 30px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+}
+
+.flex input[type ="submit"]:hover{
+  background-color: rgb(202, 202, 153);
+  color:black
+}
+.btn-form{
+  margin-top: 10px;
+}
+.flex input[type ="text"]{
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+}
+.flex input[type ="date"]{
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+
+}
+.flex input[type ="number"]{
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+
+}
