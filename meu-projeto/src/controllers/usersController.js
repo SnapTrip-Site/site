@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../modelsold/User');
 
 module.exports = {
     register (req, res) {
@@ -41,7 +41,7 @@ module.exports = {
 
        // req.session.usuario = userReceived; // se tudo for ok, cadastra o usuario na sessão;
 
-        return res.send('Sucesso'); // rediciona o usuario para a página bloqueada, que só logado pode acessar, normalmente, profile.
+        return res.render("snaptrip"); // rediciona o usuario para a página bloqueada, que só logado pode acessar, normalmente, profile.
     },
 
     profile (req, res) {},

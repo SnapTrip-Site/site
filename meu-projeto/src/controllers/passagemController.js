@@ -1,4 +1,4 @@
-const Passagem = require('../models/Passagem');
+const Passagem = require('../modelsold/Passagem');
 const PassagemController = {
     filter (req, res) {
        const destino =  req.query.destino;

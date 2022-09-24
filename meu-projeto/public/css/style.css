@@ -385,9 +385,11 @@ h3{
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
+.corpo form{
+  width: 100%;
+}
 form input{
-  width: 400px;
+  width: 200px;
   height: 45px;
   border-radius: 4px;
   text-align: center;
@@ -457,7 +459,7 @@ body {
   top: 41.26px;
   left: 30.53px;
   display: inline-block;
-  width: 144.51px;
+  width: 100px;
   height: 25.73px;
 }
 .fundo-do-resultado {
@@ -1381,7 +1383,9 @@ div.viagem {
   margin: 10px 0;
   display:flex;
   justify-content: space-around;
-  
+  display: 	flex;
+  padding: 50px;
+  font-size: xx-small;
   /* background-image: linear-gradient( to right, #9b9894, #a6a6a6); */
 }
 
@@ -1400,8 +1404,9 @@ select, textarea {
   box-sizing: border-box;
   font-size: 1.25em;
   font-family: 'Tenor Sans', sans-serif;
-  width: 100%;
+  width: 200px;
   padding: 10px;
+  display: flex;
 }
 
 div.viagem.inlined input {
@@ -1442,4 +1447,52 @@ div.corpo{
     display: 	flex;
     justify-content: center;
    
+}
+
+/*---- Trabalhe conosco ----*/
+.sub-header{
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(http://images.virgula.com.br/2016/06/aeromo%C3%A7aaas.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff
+
+}
+
+.sub-header h1{
+  margin-top: 100px;
+}
+
+.trabalhe-conosco{
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.trab-col{
+  flex-basis: 48%;
+  padding:30px 2px;
+
+}
+.trab-col img{
+  width: 100%;
+}
+
+.trab-col h1{
+  padding-top: 0;
+}
+.trab-col p{
+  padding: 15px 0 25px;
+}
+
+.red-btn{
+  border: 1px solid #f44336;
+  background: transparent;
+  color: #f44336;
+}
+.red-btn:hover{
+  color:#fff;
 }
