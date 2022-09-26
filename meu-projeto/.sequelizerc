@@ -3,8 +3,4 @@ const path = require('path');
 module.exports = {
     config: path.resolve(__dirname, 'src', 'config', 'database.js'),
     'models-path': path.resolve(__dirname, 'src', 'models')
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> 3a93333f79124e9bd58e29f44b29489223fa3a5d
