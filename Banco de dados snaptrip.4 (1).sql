@@ -12,7 +12,7 @@ fkViagem INT
 );
 
 CREATE TABLE Cidades(
-idCidade INT AUTO_INCREMENT PRIMARY KEY,
+id INT AUTO_INCREMENT PRIMARY KEY,
 nomeCidade VARCHAR(100),
 estado VARCHAR(100),
 tipoCidade INT,
