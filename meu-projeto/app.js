@@ -26,8 +26,8 @@ app.use('/', indexRouter);
 app.use('/resultados', resultadosRouter);
 app.use('/estadias', estadiaRotas);
 // app.use('/passagens', passagemRotas);
- app.use('/users', usersRouter);
-app.use('/cidades', cidadesRoutes);
+app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

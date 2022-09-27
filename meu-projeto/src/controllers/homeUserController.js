@@ -1,9 +1,7 @@
-const {HomeUser} = require('../models');
-
-module.exports = {
-    async index (req, res) {
-        const homeUser = await homeUser.findAll();
-
-        res.render('snaptrip', { homeUser })
+const homeUserController = {
+    index: (req, res) => {
+        return res.render("homeUser");
     }
-}
+};
+
+module.exports = homeUserController;

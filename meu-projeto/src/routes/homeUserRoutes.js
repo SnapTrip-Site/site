@@ -1,9 +1,13 @@
-const express = require('express');
-const homeUserController = require('../controllers/homeUserRoutes');
-
-const router = express.Router();
-
-router.get('/', homeUserController.index);
+var express = require("express");
+var router = express.Router();
+var homeUserController = require("../controllers/homeUserController");
 
 
-module.exports = router
+router.get("/", function(req, res, next){
+    res.render("index", {title: "Express"});
+});
+
+
+router.get("/homeUser", homeUserController.index);
+
+module.exports = router;
