@@ -11,7 +11,7 @@ var estadiaRotas = require('./src/routes/estadiaRotas');
  var usersRouter = require('./src/routes/usersRouter');
 var cidadesRoutes = require('./src/routes/cidadesRoutes');
 var app = express();
-
+var homeUserRoutes = require('./src/routes/homeUserRoutes')
 // view engine setup
 app.set('views', path.join(__dirname,"src", 'views'));
 app.set('view engine', 'ejs');
@@ -27,9 +27,9 @@ app.use('/resultados', resultadosRouter);
 app.use('/estadias', estadiaRotas);
 // app.use('/passagens', passagemRotas);
 app.use('/users', usersRouter);
+app.use('/homeUser', homeUserRoutes);
 
-
-// catch 404 and forward to error handler
+ //catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });

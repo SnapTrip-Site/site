@@ -3,7 +3,7 @@ var router = express.Router();
 var homeUserController = require("../controllers/homeUserController");
 
 
-router.get("/", function(req, res, next){
+router.get("/homeUser", function(req, res, next){
     res.render("index", {title: "Express"});
 });
 
