@@ -8,6 +8,6 @@ router.get("/homeUser", function(req, res, next){
 });
 
 
-router.get("/homeUser", homeUserController.index);
+router.get("/", homeUserController.index);
 
 module.exports = router;
