@@ -82,21 +82,24 @@
 		
 	<body>		
 	<div class="container">
+		<form action="/users/logout">
+			<li><a href="/">Voltar</a></li>
+			<li><a href="/users/logout">Sair</a></li>
+		</form>
 		<h1> Perfil </h1>
-		<p>Harry Potter</p>
+		<p>Olá <%= user.nome %> </p>
 			<img class="avatar" src="fotoperfil.png" alt="Avatar">	
 		
 		<div class="about"> 
 			<h1>Favoritos</h1>
-			<p>lugares aqui ashafuih asuihiuaf huiashu fiashui fhsaiuh uiash uifahuisfha uiahsui hasuih fasuih fasuihsf uiah asfuihuiasfh uiashui fsah</p>
+			<p>Florianópolis</p>
 		</div>
 		
 		<div>
 			<h2>Detalhes</h2>
 			
-			<span class="negrito">Nome:</span> <p>Vitor</p>
-			<span class="negrito">Idade:</span> <p>99 anos</p>
-			<span class="negrito">Localização:</span> <p>Região Norte de marte</p>
+			<span class="negrito">Nome:</span> <p><%= user.nome%> <%= user.sobrenome%> </p></p>
+			<span class="negrito">E-mail:</span> <p><%= user.email %> </p></p>
 			
 			
 			<img src="ico_insta.png" class="ico"/>

@@ -19,7 +19,7 @@ module.exports = {
     },
 
     async login (req, res) {
-        res.render('userForm');
+        res.render('userForm', {errors: []});
     }, 
     async auth (req, res) {
         const userReceived = req.body;
@@ -37,7 +37,20 @@ module.exports = {
             errors.push({msg: 'Senha Inválido!'});
             return res.render('userForm', {errors, userReceived});
         }
+
+            delete userReceived.password;
+            req.session.userLogged = userReceived;
+            console.log(req.session)
         
-        return res.render('homeUser'); 
+        return res.render('homeUser', {user: userFound}); 
+    }, 
+    async profile (req, res) {
+        return res.render('homeUser', {
+            userLogged: req.session.userReceived
+        })
+    },
+    async logout (req, res) {
+        req.session.destroy();
+        return res.redirect('/');
     }
 };
