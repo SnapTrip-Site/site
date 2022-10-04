@@ -38,6 +38,6 @@ module.exports = {
             return res.render('userForm', {errors, userReceived});
         }
         
-        return res.send('Sucesso'); 
+        return res.render('homeUser'); 
     }
 };
