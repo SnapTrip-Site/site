@@ -1,4 +1,4 @@
-const User = require('../modelsold/User');
+const { Usuarios } = require('../models');
 const bcryptjs = require('bcryptjs');
 
 module.exports = {
@@ -14,7 +14,11 @@ module.exports = {
             return res.render('userForm', {errors, user});
         }
 
-        User.save(user); // se esvier tudo certo com o register, ele salva.
+        await Usuarios.create({
+            nome: user.name,
+            email: user.email,
+            senha: user.password
+        }); // se esvier tudo certo com o register, ele salva.
         res.redirect('/users/login'); // rediciona para pagina de login.
     },
 
@@ -38,6 +42,6 @@ module.exports = {
             return res.render('userForm', {errors, userReceived});
         }
         
-        return res.send('Sucesso'); 
+        return res.render("homeUser"); 
     }
 };

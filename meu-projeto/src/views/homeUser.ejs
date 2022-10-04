@@ -11,7 +11,7 @@
 
 		
 		* {
-			font-family: 'Ubuntu', sans-serif;
+			font-family: 'Tenor Sans', sans-serif;
 		}
 		
 		body {
@@ -70,7 +70,7 @@
 			filter: grayscale(0);
 			cursor: pointer;
 			border-radius: 50%;
-			box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+			box-shadow: 2px 2px 2px 1px rgba(72, 92, 206, 0.2);
 		}
 		
 		.negrito {
@@ -82,14 +82,15 @@
 	</head>
 		
 	<body>		
+		<%- include('partials/header') %>
 	<div class="container">
 		<h1> Perfil </h1>
 		<p>Harry Potter</p>
-			<img class="avatar" src="fotoperfil.png" alt="Avatar">	
+			<img class="avatar" src="/img/fotoperfil.png" alt="Avatar">	
 		
 		<div class="about"> 
 			<h1>Favoritos</h1>
-			<p>lugares aqui ashafuih asuihiuaf huiashu fiashui fhsaiuh uiash uifahuisfha uiahsui hasuih fasuih fasuihsf uiah asfuihuiasfh uiashui fsah</p>
+			<p>Sua lista de favoritos</p>
 		</div>
 		
 		<div>
@@ -99,11 +100,12 @@
 			<span class="negrito">Idade:</span> <p>99 anos</p>
 			<span class="negrito">Localização:</span> <p>Região Norte de marte</p>
 			
-			
-			<img src="ico_insta.png" class="ico"/>
-			<img src="ico_twitter.png"  class="ico"/>
-			<img src="ico_facebook.png" class="ico"/>
-			
+			<!--
+			<img src="/img/ico_insta.png" class="ico"/>
+			<img src="/img/ico_twitter.png"  class="ico"/>
+			<img src="/img/ico_facebook.png" class="ico"/>
+			-->
+			<%- include('partials/footer') %>
 		</div>
 
 		

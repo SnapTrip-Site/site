@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
 
-    const User = sequelize.define('User', cols, config);
+    const Usuarios= sequelize.define('Usuarios', cols, config);
 
-    return User;
+    return Usuarios;
 }
