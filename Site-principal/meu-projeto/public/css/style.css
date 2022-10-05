@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Tenor Sans', sans-serif; 
+  font-family: 'Poppins ', sans-serif; 
   box-sizing: border-box;
 }
 
@@ -49,7 +49,7 @@
 .nav-links ul li a{
   color: #486572;
   text-decoration: none;
-  font-size: 16px ;
+  font-size: 13px ;
 }
 
 
@@ -385,11 +385,9 @@ h3{
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.corpo form{
-  width: 100%;
-}
+
 form input{
-  width: 200px;
+  width: 400px;
   height: 45px;
   border-radius: 4px;
   text-align: center;
@@ -459,7 +457,7 @@ body {
   top: 41.26px;
   left: 30.53px;
   display: inline-block;
-  width: 100px;
+  width: 144.51px;
   height: 25.73px;
 }
 .fundo-do-resultado {
@@ -1381,15 +1379,14 @@ body {
 
 div.viagem {
   margin: 10px 0;
-  display:flex;
-  justify-content: space-around;
-  display: 	flex;
-  padding: 50px;
-  font-size: xx-small;
   /* background-image: linear-gradient( to right, #9b9894, #a6a6a6); */
 }
 
-
+div.viagem.inlined {
+  width: 49%;
+  display: inline-block;
+  margin-left: 1%;
+}
 
 label {
   display: block;
@@ -1398,7 +1395,7 @@ label {
   font-size: 1.25em;
 }
 
-select, textarea {
+input, select, textarea {
   border-radius: 2px;
   border: 2px solid #777;
   box-sizing: border-box;
@@ -1406,11 +1403,10 @@ select, textarea {
   font-family: 'TenorSans';
   width: 100%;
   padding: 10px;
-  display: flex;
 }
 
 div.viagem.inlined input {
-  width: 50%;
+  width: 95%;
   display: inline-block;
 }
 
@@ -1419,11 +1415,11 @@ textarea {
 }
 
 hr {
-  border: 1px solid #879a8d(247, 1, 1);
+  border: 1px solid grey;
 }
 
 button {
-  height: 25px;
+  height: 50px;
   background: #879a8d;
   border: none;
   color: white;
@@ -1444,130 +1440,7 @@ div.corpo{
     padding: 20px;
     text-align: center;
     text-transform: uppercase;
-    display: 	flex;
-    justify-content: center;
-   
-}
-
-/*---- Trabalhe conosco ----*/
-.sub-header{
-  height: 50vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(http://images.virgula.com.br/2016/06/aeromo%C3%A7aaas.jpg);
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  color: #fff
-
-}
-
-.sub-header h1{
-  margin-top: 100px;
-}
-
-.trabalhe-conosco{
-  width: 80%;
-  margin: auto;
-  padding-top: 80px;
-  padding-bottom: 50px;
-}
-
-.trab-col{
-  flex-basis: 48%;
-  padding:30px 2px;
-
-}
-.trab-col img{
-  width: 100%;
-}
-
-.trab-col h1{
-  padding-top: 0;
-}
-.trab-col p{
-  padding: 15px 0 25px;
-}
-
-.red-btn{
-  border: 1px solid #f44336;
-  background: transparent;
-  color: #f44336;
-}
-.red-btn:hover{
-  color:#fff;
-}
-
-
-/*estruturação do formulario inteiro*/
-.header-form{
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 1px solid white;
-  border-radius: 25px;
-  width: 800px;
-  background-color: transparent;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  position: absolute; 
-left: 250px; 
-top: 70px; 
-  height: 285px;
-}
-/* titulo do forumulario */
-
-.header-form h2{
-  color: whitesmoke;
-}
-
-/* estilização dos campos do formulario */
-.form-control, .form-contro2, .form-contro3 {
-  border: 1px solid white;
-  width: 640px;
-  height: 40px;
-  margin: 10px 10px 0px 10px;
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
-  color: rgba(4,9,30,0.7);
-  
-}
-
-.form-contro2{
-  width: 644px;
-}
-
-.flex input[type ="submit"]{
-  padding: 10px 30px;
-  border: 1px solid white;
-  border-radius: 10px;
-  background: transparent;
-  cursor: pointer;
-  color: white;
-  transition: 0.5s;
-}
-
-.flex input[type ="submit"]:hover{
-  background-color: rgb(202, 202, 153);
-  color:black
-}
-.btn-form{
-  margin-top: 10px;
-}
-.flex input[type ="text"]{
-  background: transparent;
-  color: white;
-  text-transform: uppercase;
-}
-.flex input[type ="date"]{
-  background: transparent;
-  color: white;
-  text-transform: uppercase;
-
-}
-.flex input[type ="number"]{
-  background: transparent;
-  color: white;
-  text-transform: uppercase;
-
+    
 }
 
 /*---- Trabalhe conosco ----*/

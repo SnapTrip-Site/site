@@ -1,7 +1,3 @@
-<h1><% cidades.map(element => { %>
- <p><%= element.nomeCidade %> </p>
-<% }) %></h1>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,8 +12,9 @@
 
     <title>Snaptrip</title>
     </head>
+    <%- include('partials/header') %> 
 
-  <link rel="stylesheet" type="text/css" href="../public/stylesheet" media="screen" />
+<link rel="stylesheet" type="public/css" href="stylesheet.css" media="screen" />
 
 </body>
 <div class="tab">
@@ -56,12 +53,12 @@
         <h4 id='tipoDeFiltro'>Meio</h4>
         
         <label class="filtroTransporte">Aéreo
-          <input type="checkbox" id="Aéreo" name="Aéreo" checked>
+          <input type="checkbox" checked="checked">
           <span class="checkmark"></span>
         </label>
         
         <label class="filtroTransporte">Terrestre
-          <input type="checkbox" id="Terrestre" name="Terrestre" checked>
+          <input type="checkbox">
           <span class="checkmark"></span>
         </label>
 

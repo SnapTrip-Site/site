@@ -9,63 +9,20 @@
 
 
         <!--Formulario -->
-
-        <section class="formulario">
-            <div class="corpo">
-                <form action="/" method="POST">
-                    <div class="viagem">
-                        <label for="Origem">Origem</label>
-                        <select name="visitor_origem" id="Origem">
-                            <% cidades.map(element=> { %>
-                                <option value="<% element.nomeCidade %> ">
-                                    <%= element.nomeCidade %>
-                                </option>
-                                <% }) %>
-                        </select>
-
-                    </div>
-                    <div class="viagem">
-                        <label for="Destino">Destino</label>
-                        <select name="visitor_origem" id="Destino">
-                            <% cidades.map(element=> { %>
-                                <option value="<% element.nomeCidade %> ">
-                                    <%= element.nomeCidade %>
-                                </option>
-                                <% }) %>
-                        </select>
-                    </div>
-                    <div class="viagem">
-                        <label for="transporte">transporte</label>
-                        <input type="text" id="Transporte" name="visitor_transporte" placeholder="avião">
-                        <label for="origem">origem</label>
-                        <input type="text" id="Origem" name="visitor_origem" placeholder="São Paulo" required>
-                    </div>
-                    <div class="viagem">
-                        <label for="Destino">Destino</label>
-                        <input type="text" id="Destino" name="visitor_destino" placeholder="Rio de Janeiro" required>
-
-                    </div>
-                    <hr>
-                    <div class="viagem inlined">
-                        <label for="Ida">data de ida</label>
-                        <input type="date" id="data de ida" name="data de ida" required>
-                    </div>
-                    <div class="viagem inlined">
-                        <label for="data de volta">data de volta</label>
-                        <input type="date" id="data de volta" name="data de volta" required>
-                    </div>
-                    <div class="viagem">
-                        <label for="origem">Local do evento</label>
-                        <input type="text" id="Local do evento" name="visitor_Local do evento" placeholder="Riocentro"
-                            required>
-
-
-                    </div>
-                    <hr>
-                    <div class="viagem">
-
-                    </div>
-                    <button type="submit">Procurar</button>
+        <div class="header-form">
+            <h2>Escolha seu Destino</h2>
+            <form class="flex">
+                <input type="text" class = "form-control" placeholder="Destino">
+                <select name="visitor_origem" id="Origem">
+                    <% cidades.map(element => { %>
+                         <option value="<% element.nome %> "><%= element.nome %></option>
+                       <% }) %> 
+                  </select>
+                <input type="date" class = "form-contro2" placeholder="Data">
+                <input type="text" class = "form-contro3" placeholder="Local do evento">
+                <input type="submit" class = "btn-form" value="PROCURAR">
+            </form>
+        </div>
 
 
 
@@ -124,9 +81,9 @@
                 </div>
             </div>
             <div class="locais-coluna">
-                <img src="/img/washington.png">
+                <img src="../public/img/riodejaneiro.jpg">
                 <div class="layer">
-                    <h3>WASHINGTON</h3>
+                    <h3>Rio de Janeiro</h3>
                 </div>
             </div>
         </div>
