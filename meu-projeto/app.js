@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 
 var indexRouter = require('./src/routes/index');
 var resultadosRouter = require('./src/routes/resultados');
@@ -11,7 +12,12 @@ var estadiaRotas = require('./src/routes/estadiaRotas');
  var usersRouter = require('./src/routes/usersRouter');
 var cidadesRoutes = require('./src/routes/cidadesRoutes');
 var app = express();
-var homeUserRoutes = require('./src/routes/homeUserRoutes')
+app.use(session({
+  secret:'Segredo',
+  resave: false,
+  saveUninitialized: false,
+}));
+
 // view engine setup
 app.set('views', path.join(__dirname,"src", 'views'));
 app.set('view engine', 'ejs');
