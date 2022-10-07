@@ -1,4 +1,4 @@
-<%- include('partials/headerHome') %>
+<%- include('partials/header') %>
 
     <div class="text-box header-PaginaPrincipal">
         <!-- <h1>Maior Agência</h1>
@@ -12,14 +12,9 @@
         <div class="header-form">
             <h2>Escolha seu Destino</h2>
             <form class="flex">
-                <input type="text" class = "form-control" placeholder="Destino">
-                <select name="visitor_origem" id="Origem">
-                    <% cidades.map(element => { %>
-                         <option value="<% element.nome %> "><%= element.nome %></option>
-                       <% }) %> 
-                  </select>
-                <input type="date" class = "form-contro2" placeholder="Data">
-                <input type="text" class = "form-contro3" placeholder="Local do evento">
+                <input type="select" class = "form-control" placeholder="Destino">
+                <input type="select" class = "form-contro2" placeholder="Data">
+                <input type="select" class = "form-contro3" placeholder="Local do evento">
                 <input type="submit" class = "btn-form" value="PROCURAR">
             </form>
         </div>
@@ -69,19 +64,20 @@
             nostrum laborum incidunt.</p>
         <div class="row">
             <div class="locais-coluna">
-                <img src="/img/london.png">
+                <img src="/img/Brasilia.jpg
+                ">
                 <div class="layer">
-                    <h3>LONDON</h3>
+                    <h3>Brasilia</h3>
                 </div>
             </div>
             <div class="locais-coluna">
-                <img src="/img/newyork.png">
+                <img src="/img/sao_paulo.jpg">
                 <div class="layer">
-                    <h3>NEW YORK</h3>
+                    <h3>São Paulo</h3>
                 </div>
             </div>
             <div class="locais-coluna">
-                <img src="../public/img/riodejaneiro.jpg">
+                <img src="/img/riodejaneiro.jpg">
                 <div class="layer">
                     <h3>Rio de Janeiro</h3>
                 </div>
