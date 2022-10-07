@@ -44,7 +44,7 @@ module.exports = {
         req.session.userLogged = userReceived;
 
         if(req.body.remember_user) {
-            res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 30});
+            res.cookie("user", req.body.email, {maxAge: (1000 * 60) * 30});
         }
         
         return res.redirect('/users/profile');
@@ -58,6 +58,7 @@ module.exports = {
     },
     async logout (req, res) {
         req.session.destroy();
+        res.clearCookie("user");
         return res.redirect('/');
     }
 };
