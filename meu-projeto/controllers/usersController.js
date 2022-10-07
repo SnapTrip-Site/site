@@ -1,6 +1,8 @@
 const User = require('../repositorios/User');
 const bcryptjs = require('bcryptjs');
 
+
+
 module.exports = {
     async register (req, res) {
         res.cookie('teste', 'Olá', { maxAge: 1000});
@@ -42,15 +44,16 @@ module.exports = {
         req.session.userLogged = userReceived;
 
         if(req.body.remember_user) {
-            res.cookies("userEmail", req.body.email, {maxAge: (1000 * 60) * 30});
+            res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 30});
         }
         
-        return res.render('homeUser', {user: userFound});
+        return res.redirect('/users/profile');
         
     }, 
     async profile (req, res) {
+        console.log(req.cookies.userEmail)
         return res.render('homeUser', {
-            userReceived: req.session.user
+            user: req.session.userLogged
         })
     },
     async logout (req, res) {

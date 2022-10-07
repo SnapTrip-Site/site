@@ -20,7 +20,6 @@ app.use(session({
   saveUninitialized: false,
 }));
 
-app.use(loggedUserDataMiddleware);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
