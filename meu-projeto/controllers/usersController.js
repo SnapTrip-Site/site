@@ -3,6 +3,7 @@ const bcryptjs = require('bcryptjs');
 
 module.exports = {
     async register (req, res) {
+        res.cookie('teste', 'Olá', { maxAge: 1000});
         res.render('userForm', {errors: []});
     },
     async save (req, res) {
@@ -24,7 +25,6 @@ module.exports = {
     async auth (req, res) {
         const userReceived = req.body;
         const errors = [];
-
         const userFound = await User.find(userReceived.email); 
 
         if(!userFound) { 
@@ -38,15 +38,19 @@ module.exports = {
             return res.render('userForm', {errors, userReceived});
         }
 
-            delete userReceived.password;
-            req.session.userLogged = userReceived;
-            console.log(req.session)
+        delete userReceived.password;
+        req.session.userLogged = userReceived;
+
+        if(req.body.remember_user) {
+            res.cookies("userEmail", req.body.email, {maxAge: (1000 * 60) * 30});
+        }
         
-        return res.render('homeUser', {user: userFound}); 
+        return res.render('homeUser', {user: userFound});
+        
     }, 
     async profile (req, res) {
         return res.render('homeUser', {
-            userLogged: req.session.userReceived
+            userReceived: req.session.user
         })
     },
     async logout (req, res) {
