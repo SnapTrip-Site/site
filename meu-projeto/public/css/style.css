@@ -1442,3 +1442,58 @@ div.corpo{
     text-transform: uppercase;
     
 }
+
+/* titulo do forumulario /
+
+.header-form h2{
+  color: whitesmoke;
+}
+
+/ estilização dos campos do formulario */
+
+.dataEstilo{
+  border: 1px solid rgb(255, 255, 255);
+  width: 100px;
+  height: 40px;
+  margin: 10px 10px 0px 10px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+  color: rgba(4,9,30,0.7);
+
+}
+
+  .form-contro3{
+    border: 1px solid white;
+    width: 200px;
+    height: 40px;
+    margin: 10px 10px 0px 10px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+    color: rgba(4,9,30,0.7);
+    margin-top: 50px;
+}
+
+
+.form-control{
+  border: 1px solid white;
+  width: 200px;
+  height: 40px;
+  margin: 10px 10px 0px 10px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+  color: rgba(4,9,30,0.7);
+}
+ 
+.header-form{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  width: 800px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: absolute; 
+  left: 250px; 
+  top: 70px; 
+  height: 285px;
+  margin-top: 100px;
+}
