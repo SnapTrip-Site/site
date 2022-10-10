@@ -128,13 +128,16 @@
             <div class="dentro-caixa" id="cartao">
                 <div class="cartao-front">
                     <h2>LOGIN</h2>
+                    <% errors.forEach(error => { %>
+                       <%= error.msg %>
+                    <% }) %>
                     <form method="POST" action="/users/login">
                         <input name="email" type="email" class="input-caixa" placeholder="Email" required>
                         <input name="password" type="password" class="input-caixa" placeholder="Senha" required>
                         <button type="submit" class="enviar-btn">Enviar</button>
-                        <input type="checkbox"><span>Lembrar de mim</span>
+                        <input name="remember_user" type="checkbox"><span>Lembrar de mim</span>
                     </form>
-                    <button type="button" class="btn" onclick="abraRegistro()">Sou Novo</button>
+                    <button action="/users/register "type="button" class="btn" onclick="abraRegistro()">Sou Novo</button>
                     <a href="">Esqueci minha Senha</a>
                 </div>
                 <div class="cartao-back"><h2>REGISTRE-SE</h2>
