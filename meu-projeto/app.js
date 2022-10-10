@@ -1,8 +1,13 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
+var cookies = require('cookie-parser');
 var logger = require('morgan');
+<<<<<<< HEAD
+=======
+var session = require('express-session');
+var loggedUserDataMiddleware = require('./middleware/loggedUserDataMiddleware');
+>>>>>>> Develop
 
 var indexRouter = require('./src/routes/index');
 var resultadosRouter = require('./src/routes/resultados');
@@ -11,7 +16,18 @@ var estadiaRotas = require('./src/routes/estadiaRotas');
  var usersRouter = require('./src/routes/usersRouter');
 var cidadesRoutes = require('./src/routes/cidadesRoutes');
 var app = express();
+<<<<<<< HEAD
 var homeUserRoutes = require('./src/routes/homeUserRoutes')
+=======
+
+app.use(session({
+  secret:'Segredo',
+  resave: false,
+  saveUninitialized: false,
+}));
+
+
+>>>>>>> Develop
 // view engine setup
 app.set('views', path.join(__dirname,"src", 'views'));
 app.set('view engine', 'ejs');
@@ -19,7 +35,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookies());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

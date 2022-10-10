@@ -4,7 +4,8 @@ const EstadiaController = {
     //mostra lista de produtos
     index: (req, res)=>{
 
-        return res.render('transporteEstadia')
+        res.render('transporteEstadia')
+
     },
 
     //dados adicionais do produto
