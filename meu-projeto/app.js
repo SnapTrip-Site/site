@@ -9,7 +9,7 @@ var loggedUserDataMiddleware = require('./middleware/loggedUserDataMiddleware');
 var indexRouter = require('./routes/index');
 var resultadosRouter = require('./routes/resultados');
 var estadiaRotas = require('./routes/estadiaRotas');
-// var passagemRotas = require ('./routes/passagemRotas');
+var passagemRotas = require ('./routes/passagemRotas');
 var usersRouter = require('./routes/usersRouter');
 var cidadesRoutes = require('./routes/cidadesRoutes');
 var app = express();
@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/resultados', resultadosRouter);
 app.use('/estadias', estadiaRotas);
-// app.use('/passagens', passagemRotas);
+app.use('/passagens', passagemRotas);
 app.use('/users', usersRouter);
 
 

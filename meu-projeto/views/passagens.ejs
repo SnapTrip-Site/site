@@ -1,3 +1,15 @@
-<h1><% cidades.map(element => { %>
- <p><%= element.nomeCidade %> </p>
-<% }) %></h1>
+<% passagens.map(passagens => { %>
+    <div><%= passagens.origem %></div>
+  <% }) %> 
+  <% passagens.map(passagens => { %>
+    <div><%= passagens.destino %></div>
+  <% }) %> 
+  <% passagens.map(passagens => { %>
+    <div><%= passagens.tarifa %></div>
+  <% }) %> 
+  <% passagens.map(passagens => { %>
+    <div><%= passagens.horarioSaida %></div>
+  <% }) %>
+  <% passagens.map(passagens => { %>
+    <div><%= passagens.duracao %></div>
+  <% }) %> 

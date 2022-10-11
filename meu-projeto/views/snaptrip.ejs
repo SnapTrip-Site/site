@@ -33,17 +33,17 @@
             <!--Formulario -->
             <div class="header-form">
                 <h2>Escolha seu Destino</h2>
-                <form action="reservation.php" method="POST" class="flex">
+                <form action="/passagens" method="POST" class="flex">
                     <label for="Origem">Origem</label>
                     <select name="visitor_origem" id="Origem">
                         <% cidades.map(element => { %>
-                             <option value="<% element.nome %> "><%= element.nome %></option>
+                             <option value="<%= element.id %> "><%= element.nome %></option>
                            <% }) %> 
                       </select>
                       <label for="Destino">Destino</label>
                       <select name="visitor_destino" id="Origem">
                           <% cidades.map(element => { %>
-                              <option value="<% element.nome %> "><%= element.nome %></option>
+                              <option value="<%= element.id %> "><%= element.nome %></option>
                           <% }) %> 
                       </select>
                       <label for="localEvento">Local do Evento</label>

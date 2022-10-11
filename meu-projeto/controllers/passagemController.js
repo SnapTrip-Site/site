@@ -1,16 +1,35 @@
-const Passagem = require('../models/Passagem');
+const { sequelize } = require('../models');
+
 const PassagemController = {
-    filter (req, res) {
-       const destino =  req.query.destino;
-       const origem = req.query.origem;
-       var passagens = Passagem.filter(origem, destino)
-       console.log(passagens);
-       res.render('passagens',{passagens});
-    },
-    find (req, res) {},
-    store (req, res) {},
-    update (req, res) {},
-    destroy (req, res) {},
+    async filter (req, res) {
+       const destino =  req.body.visitor_destino;
+       const origem = req.body.visitor_origem;
+
+       const query = `SELECT 
+            passagens,
+            origem.nome AS origem,
+            destino.nome AS destino,
+            meio,
+            empresa,
+            tarifa,
+            horarioSaidaTime,
+            horarioSaida,
+            horarioChegada,
+            duracao,
+            duracaoMin
+        FROM
+            Passagens AS Passagens
+        LEFT JOIN
+            cidades AS origem ON origem.id = fkCidadeOrigem
+        LEFT JOIN
+            cidades destino ON destino.id = fkCidadeDestino
+        WHERE
+            Passagens.fkCidadeDestino = ${destino}
+        AND Passagens.fkCidadeOrigem = ${origem};`
+
+       const [passagens] = await sequelize.query(query);
+       res.render('passagens', { passagens});
+    }
 }
 
 module.exports = PassagemController;

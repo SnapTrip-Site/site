@@ -23,14 +23,17 @@
                            <% }) %> 
                       </select>
         
+
+
+
                     </div>
                     <div class="viagem">
-                      <label for="Destino">Destino</label>
-                      <select name="visitor_destino" id="Origem">
-                        <% cidades.map(element => { %>
-                             <option value="<% element.nome %> "><%= element.nome %></option>
-                           <% }) %> 
-                      </select>
+                        <label for="Destino">Destino</label>
+                        <select name="visitor_destino" id="Origem">
+                            <% cidades.map(element => { %>
+                                <option value="<% element.nome %> "><%= element.nome %></option>
+                            <% }) %> 
+                        </select>
                     </div>
                     <div class="viagem">
                       <label for="transporte">Transporte</label>
