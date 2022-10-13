@@ -1,0 +1,225 @@
+<h1><% cidades.map(element => { %>
+ <p><%= element.nomeCidade %> </p>
+<% }) %></h1>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+    <title>Snaptrip</title>
+    </head>
+
+  <link rel="stylesheet" type="text/css" href="stylesheet" media="screen" />
+
+</body>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Transporte')" id="defaultOpen">TRANSPORTE</button>
+  <button class="tablinks" onclick="openCity(event, 'Estadia')">ESTADIA</button>
+</div>
+
+<!-- Tab 1 content -->
+<div id="Transporte" class="tabcontent">
+
+  <div class="FiltrosBusca">
+    <div class="item">
+      <p>Origem</p>
+        <h4>Rio de Janeiro</h4>
+        </div>
+    <div class="item">
+        <p>Destino</p>
+        <h4>São Paulo</h4>
+      </div>
+    <div class="item">    
+      <p>Ida</p>
+        <h4>14/12/2022</h4>
+     </div>
+     <div class="item"> 
+        <p>Volta</p>
+        <h4>17/12/2022</h4>
+      </div>
+      <div class="botão">
+        <p>Nova pesquisa</p>
+      </div>
+    </div>
+
+    <div class="FiltrosEResultados">
+      <div id="Filtros">
+        <h3 id='title'>FILTROS</h3>
+        <h4 id='tipoDeFiltro'>Meio</h4>
+        
+        <label class="filtroTransporte">Aéreo
+          <input type="checkbox" id="Aéreo" name="Aéreo" checked>
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="filtroTransporte">Terrestre
+          <input type="checkbox" id="Terrestre" name="Terrestre" checked>
+          <span class="checkmark"></span>
+        </label>
+
+        <h4 id='tipoDeFiltro'>Horário</h4>
+        <p>Ida</p>
+        <p>0h00 - 24h00</p>
+          <div class="multi-range-slider">
+            <input type="range" id="input-left" min="0" max="100" value="0">
+            <input type="range" id="input-right" min="0" max="100" value="100">
+        
+            <div class="multi-range-slider">
+              <input type="range" id="input-left" min="0" max="100" value="0">
+              <input type="range" id="input-right" min="0" max="100" value="100">
+              
+              <div class="slider">
+              <div class="track"></div>
+              <div class="range"></div>
+              <div class="thumb left"></div>
+              <div class="thumb right"></div>
+            </div>
+          </div>
+          <p>Madrugada | Manhã | Tarde | Noite</p>
+        </div>
+        <p>Volta</p>
+        <p>0h00 - 24h00</p>
+          <div class="multi-range-slider">
+            <input type="range" id="input-left" min="0" max="100" value="0">
+            <input type="range" id="input-right" min="0" max="100" value="100">
+        
+            <div class="multi-range-slider">
+              <input type="range" id="input-left" min="0" max="100" value="0">
+              <input type="range" id="input-right" min="0" max="100" value="100">
+              
+              <div class="slider">
+              <div class="track"></div>
+              <div class="range"></div>
+              <div class="thumb left"></div>
+              <div class="thumb right"></div>
+            </div>
+          </div>
+          <p>Madrugada | Manhã | Tarde | Noite</p>
+        </div>
+      </div>
+      
+        <div id="Resultado1">  
+            <p>MAIS RÁPIDO</p>
+            <h3>R$700</h3>
+            <p>0h 55min (média)</p>
+          </div>
+          
+          <div id="Resultado2">
+            <p>MAIS BARATO</p>
+            <h3>R$250</h3>
+            <p>6h 30min (média)</p>
+          </div>
+     
+      </div> 
+</div>
+
+<div id="Estadia" class="tabcontent">
+
+<div class="FiltrosBusca">
+  <div class="item">
+      <p>Destino</p>
+      <h4>São Paulo</h4>
+    </div>
+  <div class="item">    
+    <p>Ida</p>
+      <h4>14/12/2022</h4>
+   </div>
+   <div class="item"> 
+      <p>Volta</p>
+      <h4>17/12/2022</h4>
+    </div>
+    <div class="item">
+      <p>Local do evento</p>
+        <h4>Centro de Convenções Rebouças</h4>
+        </div>
+    <div class="botão">
+      <p>Nova pesquisa</p>
+    </div>
+  </div>
+
+  <div class="FiltrosEResultados">
+    <div id="Filtros">
+      <h3 id='title'>FILTROS</h3>
+      <h4 id='tipoDeFiltro'>Hospedagem</h4>
+      
+      <label class="filtroTransporte">Hotel
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="filtroTransporte">Apartamento/Casa
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+
+      <h4 id='tipoDeFiltro'>Distância</h4>
+      <p>Do local do evento</p>
+      <p>0km - 100km</p>
+        <div class="multi-range-slider">
+          <input type="range" id="input-left" min="0" max="100" value="0">
+          <input type="range" id="input-right" min="0" max="100" value="100">
+      
+          <div class="multi-range-slider">
+            <input type="range" id="input-left" min="0" max="100" value="0">
+            <input type="range" id="input-right" min="0" max="100" value="100">
+            
+            <div class="slider">
+            <div class="track"></div>
+            <div class="range"></div>
+            <div class="thumb left"></div>
+            <div class="thumb right"></div>
+          </div>
+        </div>
+        <p></p>
+      </div>
+      <p>Do aeroporto/rodoviária</p>
+      <p>0km - 100km</p>
+        <div class="multi-range-slider">
+          <input type="range" id="input-left" min="0" max="100" value="0">
+          <input type="range" id="input-right" min="0" max="100" value="100">
+      
+          <div class="multi-range-slider">
+            <input type="range" id="input-left" min="0" max="100" value="0">
+            <input type="range" id="input-right" min="0" max="100" value="100">
+            
+            <div class="slider">
+            <div class="track"></div>
+            <div class="range"></div>
+            <div class="thumb left"></div>
+            <div class="thumb right"></div>
+          </div>
+        </div>
+        <p></p>
+      </div>
+    </div>
+    
+      <div id="Resultado1">  
+          <p>MAIS PRÓXIMO</p>
+          <h3>R$870</h3>
+          <p>200m do local do evento</p>
+        </div>
+        
+        <div id="Resultado2">
+          <p>MAIS BARATO</p>
+          <h3>R$369</h3>
+          <p>17km do local do evento</p>
+        </div>  
+    </div> 
+</div>
+<script type="text/javascript" src="resultados.js"></script>
+<script>
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+</body>
+
+<!--Footer-->
+<%- include('partials/footer') %> 
