@@ -1,4 +1,4 @@
-const User = require('../repositorios/User');
+const User = require('../../repositorios/User');
 const bcryptjs = require('bcryptjs');
 
 

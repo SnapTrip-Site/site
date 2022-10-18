@@ -65,12 +65,5 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 
-//porta de entrada 
-
-app.listen(3000, () => {
-  console.log("Eu estou ouvindo")
-})
-
-
 
 

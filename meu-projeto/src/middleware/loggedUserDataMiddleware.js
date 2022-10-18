@@ -1,4 +1,4 @@
-const {User} = require('../models/');
+const {User} = require('../models/Usuario');
 
 async function loggedUserDataMiddleware (req, res, next) {
     res.locals.isLogged = false;

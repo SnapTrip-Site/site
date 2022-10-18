@@ -1,5 +1,5 @@
 const bcryptjs = require('bcryptjs');
-const {User} = require('../models');
+const {User} = require('../src/models');
 
 module.exports = {
     async save (input) {
