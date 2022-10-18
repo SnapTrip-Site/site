@@ -1379,14 +1379,13 @@ body {
 
 div.viagem {
   margin: 10px 0;
+  display:flex;
+  justify-content: space-around;
+  
   /* background-image: linear-gradient( to right, #9b9894, #a6a6a6); */
 }
 
-div.viagem.inlined {
-  width: 49%;
-  display: inline-block;
-  margin-left: 1%;
-}
+
 
 label {
   display: block;
@@ -1401,12 +1400,12 @@ select, textarea {
   box-sizing: border-box;
   font-size: 1.25em;
   font-family: 'TenorSans';
-  width: 100%;
-  padding: 10px;
+  width: 50%;
+  padding: 5px;
 }
 
 div.viagem.inlined input {
-  width: 95%;
+  width: 50%;
   display: inline-block;
 }
 
@@ -1415,11 +1414,11 @@ textarea {
 }
 
 hr {
-  border: 1px solid grey;
+  border: 1px solid #879a8d(247, 1, 1);
 }
 
 button {
-  height: 50px;
+  height: 25px;
   background: #879a8d;
   border: none;
   color: white;
@@ -1440,7 +1439,9 @@ div.corpo{
     padding: 20px;
     text-align: center;
     text-transform: uppercase;
-    
+    display: 	flex;
+    justify-content: center;
+   
 }
 
 /* titulo do forumulario /

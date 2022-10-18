@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -36,11 +37,13 @@
                 <form action="/passagens" method="POST" class="flex">
                     <label for="Origem">Origem</label>
                     <select name="visitor_origem" id="Origem">
+
                         <% cidades.map(element => { %>
                              <option value="<%= element.id %> "><%= element.nome %></option>
                            <% }) %> 
                       </select>
                       <label for="Destino">Destino</label>
+
                       <select name="visitor_destino" id="Origem">
                           <% cidades.map(element => { %>
                               <option value="<%= element.id %> "><%= element.nome %></option>
@@ -52,7 +55,7 @@
                     <select type="select" class = "dataEstilo" placeholder="Data">
                     
                     <input type="submit" class = "btn-form" value="PROCURAR">
-        
+
                
                 </form>
     
