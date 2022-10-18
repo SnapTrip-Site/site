@@ -21,7 +21,6 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  z-index: 0;
 }
 .nav-topo{
   display: flex;
@@ -38,6 +37,10 @@
 }
 .nav-links{
   display: flex;
+  flex: 1;
+  text-align: right;
+  padding-left: 450px;
+  z-index: 1;
 }
 
 .nav-links ul li{
@@ -1379,14 +1382,13 @@ body {
 
 div.viagem {
   margin: 10px 0;
+  display:flex;
+  justify-content: space-around;
+  
   /* background-image: linear-gradient( to right, #9b9894, #a6a6a6); */
 }
 
-div.viagem.inlined {
-  width: 49%;
-  display: inline-block;
-  margin-left: 1%;
-}
+
 
 label {
   display: block;
@@ -1395,18 +1397,18 @@ label {
   font-size: 1.25em;
 }
 
-input, select, textarea {
+select, textarea {
   border-radius: 2px;
   border: 2px solid #777;
   box-sizing: border-box;
   font-size: 1.25em;
   font-family: 'TenorSans';
-  width: 100%;
-  padding: 10px;
+  width: 50%;
+  padding: 5px;
 }
 
 div.viagem.inlined input {
-  width: 95%;
+  width: 50%;
   display: inline-block;
 }
 
@@ -1415,11 +1417,11 @@ textarea {
 }
 
 hr {
-  border: 1px solid grey;
+  border: 1px solid #879a8d(247, 1, 1);
 }
 
 button {
-  height: 50px;
+  height: 25px;
   background: #879a8d;
   border: none;
   color: white;
@@ -1440,7 +1442,64 @@ div.corpo{
     padding: 20px;
     text-align: center;
     text-transform: uppercase;
-    
+    display: 	flex;
+    justify-content: center;
+   
+}
+
+/* titulo do forumulario /
+
+.header-form h2{
+  color: whitesmoke;
+}
+
+/ estilização dos campos do formulario */
+
+.dataEstilo{
+  border: 1px solid rgb(255, 255, 255);
+  width: 100px;
+  height: 40px;
+  margin: 10px 10px 0px 10px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+  color: rgba(4,9,30,0.7);
+
+}
+
+  .form-contro3{
+    border: 1px solid white;
+    width: 200px;
+    height: 40px;
+    margin: 10px 10px 0px 10px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+    color: rgba(4,9,30,0.7);
+    margin-top: 50px;
+}
+
+
+.form-control{
+  border: 1px solid white;
+  width: 200px;
+  height: 40px;
+  margin: 10px 10px 0px 10px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+  color: rgba(4,9,30,0.7);
+}
+ 
+.header-form{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  width: 800px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: absolute; 
+  left: 250px; 
+  top: 70px; 
+  height: 285px;
+  margin-top: 100px;
 }
 
 /*---- Trabalhe conosco ----*/
