@@ -23,13 +23,13 @@ app.use(session({
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookies());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', indexRouter);
 app.use('/resultados', resultadosRouter);
@@ -57,12 +57,7 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-// adicionando template engine ao express
 
-app.set('view engine', 'ejs');
-
-// adicionar o local de arquivos estaticos 
-app.use(express.static('public'));
 
 
 

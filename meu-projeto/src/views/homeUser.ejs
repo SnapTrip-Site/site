@@ -81,6 +81,7 @@
 	</head>
 		
 	<body>		
+	
 	<div class="container">
 		<form action="/users/logout">
 			<li><a href="/">Voltar</a></li>
@@ -88,7 +89,7 @@
 		</form>
 		<h1> Perfil </h1>
 		<p>Olá <%= user.nome %> </p>
-			<img class="avatar" src="fotoperfil.png" alt="Avatar">	
+			<img class="avatar" src="/img/logoUser.png" alt="Avatar">	
 		
 		<div class="about"> 
 			<h1>Favoritos</h1>
@@ -102,8 +103,6 @@
 			<span class="negrito">E-mail:</span> <p><%= user.email %> </p></p>
 			
 			
-			<img src="ico_insta.png" class="ico"/>
-			<img src="ico_twitter.png"  class="ico"/>
-			<img src="ico_facebook.png" class="ico"/>
 			
+			<%- include('partials/footer') %> 
 		</div>
