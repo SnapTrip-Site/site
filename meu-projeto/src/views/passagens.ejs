@@ -1,15 +1,108 @@
-<% passagens.map(passagens => { %>
-    <div><%= passagens.origem %></div>
-  <% }) %> 
-  <% passagens.map(passagens => { %>
-    <div><%= passagens.destino %></div>
-  <% }) %> 
-  <% passagens.map(passagens => { %>
-    <div><%= passagens.tarifa %></div>
-  <% }) %> 
-  <% passagens.map(passagens => { %>
-    <div><%= passagens.horarioSaida %></div>
-  <% }) %>
-  <% passagens.map(passagens => { %>
-    <div><%= passagens.duracao %></div>
-  <% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.origem %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[0]?.destino %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[0]?.tarifa %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[0]?.horarioChegada %></div>
+<% }) %>
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[0]?.horarioSaida %></div>
+<% }) %>
+////////////////////////////////////////////////////
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.origem %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[1]?.destino %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[1]?.tarifa %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[1]?.horarioChegada %></div>
+<% }) %>
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[1]?.horarioSaida %></div>
+<% }) %>
+////////////////////////////////////////////////////
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.origem %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[2]?.destino %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[2]?.tarifa %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[2]?.horarioChegada %></div>
+<% }) %>
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[2]?.horarioSaida %></div>
+<% }) %>
+////////////////////////////////////////////////////
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.origem %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[3]?.destino %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[3]?.tarifa %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[3]?.horarioChegada %></div>
+<% }) %>
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[3]?.horarioSaida %></div>
+<% }) %>
+////////////////////////////////////////////////////
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.origem %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[4]?.destino %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[4]?.tarifa %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[4]?.horarioChegada %></div>
+<% }) %>
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[4]?.horarioSaida %></div>
+<% }) %>
+////////////////////////////////////////////////////
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.origem %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[5]?.destino %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[5]?.tarifa %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[5]?.horarioChegada %></div>
+<% }) %>
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[5]?.horarioSaida %></div>
+<% }) %>
+
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[6]?.destino %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[6]?.tarifa %></div>
+<% }) %> 
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[6]?.horarioChegada %></div>
+<% }) %>
+<% passagensPorCidade.map(passagens => { %>
+  <div><%= passagens.passagem[6]?.horarioSaida %></div>
+<% }) %>

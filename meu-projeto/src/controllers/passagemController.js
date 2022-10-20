@@ -27,8 +27,29 @@ const PassagemController = {
             Passagens.fkCidadeDestino = ${destino}
         AND Passagens.fkCidadeOrigem = ${origem};`
 
+
        const [passagens] = await sequelize.query(query);
-       res.render('passagens', { passagens});
+
+        const passagensPorCidade = []
+        passagens.forEach(passagem => {
+            const { origem, destino, tarifa, horarioSaida, horarioChegada} = passagem;
+            const novaPassagem = {destino, tarifa, horarioSaida, horarioChegada}; 
+            const passagemEncontrada = passagensPorCidade.find(cidadeCadastrada => cidadeCadastrada.origem == origem);
+            if(passagemEncontrada) {
+                passagemEncontrada.passagens.push(novaPassagem);
+            }else {
+                passagensPorCidade.push({
+                    origem,
+                    passagens: [novaPassagem]
+                })
+            }
+        })
+
+        console.log(JSON.stringify(passagensPorCidade, null, 2))
+       res.render('passagens', { passagensPorCidade: passagensPorCidade.map(passagemCidade => ({
+        ...passagemCidade,
+        passagem: passagemCidade.passagens.flat()
+      })) });
     }
 }
 
