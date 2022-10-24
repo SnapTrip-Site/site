@@ -1,4 +1,4 @@
-const { sequelize } = require('../models');
+const { sequelize, Cidades } = require('../models');
 
 const PassagemController = {
     async filter (req, res) {
@@ -44,9 +44,8 @@ const PassagemController = {
                 })
             }
         })
-
-        console.log(JSON.stringify(passagensPorCidade, null, 2))
-       res.render('passagens', { passagensPorCidade: passagensPorCidade.map(passagemCidade => ({
+        const cidades = await Cidades.findAll();
+       res.render('transporteEstadia', { cidades, passagensPorCidade: passagensPorCidade.map(passagemCidade => ({
         ...passagemCidade,
         passagem: passagemCidade.passagens.flat()
       })) });

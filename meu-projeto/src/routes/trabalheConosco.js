@@ -1,12 +1,8 @@
-var express = require('express');
-var trabalheConoscoController = require(':/controllers/trabalheConoscoController')
-var router = express.Router();
+const express = require('express');
+const trabalheConoscoController = require('../controllers/trabalheConoscoController');
+const router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('trabalheconosco', { title: 'express' });
-});
-
-
+router.get('/trabalhe', trabalheConoscoController.list);
 
 module.exports = router
