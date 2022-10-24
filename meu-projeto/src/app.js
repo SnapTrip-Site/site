@@ -12,6 +12,7 @@ var estadiaRotas = require('./routes/estadiaRotas');
 var passagemRotas = require ('./routes/passagemRotas');
 var usersRouter = require('./routes/usersRouter');
 var cidadesRoutes = require('./routes/cidadesRoutes');
+var trabalheConosco = require('./routes/trabalheConosco');
 var app = express();
 
 app.use(session({
@@ -36,6 +37,7 @@ app.use('/resultados', resultadosRouter);
 app.use('/estadias', estadiaRotas);
 app.use('/passagens', passagemRotas);
 app.use('/users', usersRouter);
+app.use('/', trabalheConosco);
 
 
 // catch 404 and forward to error handler
