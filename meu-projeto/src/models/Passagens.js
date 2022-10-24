@@ -42,6 +42,6 @@ module.exports = (sequelize, DataTypes) => {
     }
     
     const Passagens = sequelize.define('Passagens', cols, config);
-
+   
     return Passagens;
 }

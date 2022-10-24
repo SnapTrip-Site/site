@@ -1,4 +1,3 @@
-
 const bcryptjs = require('bcryptjs');
 const userRepository = require('../../repositorios/User');
 const {Cidades, User} = require('../models');

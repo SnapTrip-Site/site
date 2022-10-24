@@ -44,10 +44,8 @@ const PassagemController = {
                 })
             }
         })
-
         const cidades = await Cidades.findAll();
        res.render('transporteEstadia', { cidades, passagensPorCidade: passagensPorCidade.map(passagemCidade => ({
-
         ...passagemCidade,
         passagem: passagemCidade.passagens.flat()
       })) });

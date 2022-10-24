@@ -1,6 +1,6 @@
     <%- include('partials/headerHome') %> 
 
-<!-- <link rel="stylesheet" type="public/css" href="../../public/css/stylesheet.css" media="screen" /> -->
+<link rel="stylesheet" type="public/css" href="../../public/css/stylesheet.css" media="screen" /> 
 
 </body>
 <div class="tab">
@@ -12,6 +12,10 @@
 
   <div class="FiltrosBusca">
     <div class="item">
+      <% if(passagensPorCidade.length == 0)%>
+      <div>
+        <h2>Nenhuma passagem encontrada</h2>
+      </div> 
       <% passagensPorCidade.map(passagem => { %>
         <% if(passagem.passagem.length > 0){ %>
             <% passagem.passagem.forEach(psg => {%>
