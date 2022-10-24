@@ -12,6 +12,7 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
         integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+        
 </head>
 
 <body>
@@ -21,10 +22,12 @@
                 <img src="/img/logoSnaptrip.png">
             </a>
             <div class="nav-links" id="navLinks">
+                <meta name = "viewport" content="widith= device-widith, initial-scale=1">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="/">HOME</a></li>
                     <li><a href="/trabalhe">TRABALHE CONOSCO</a></li>
+                    <li><a href="/users/profile">PERFIL</a></li>
                     <li><a href="/users/login">LOGIN</a></li>
                 </ul>
             </div>
@@ -54,13 +57,6 @@
                                 <%= element.nome %>
                             </option>
                             <% }) %>
-                    </select>
-
-                    <label for="localEvento">Local do Evento</label>
-                    <select type="select" class="form-contro3" placeholder="Local do evento">
-                        <label for="Data">Data</label>
-                        <select type="select" class="dataEstilo" placeholder="Data"> 
-                        </select>
                     </select>
                     <input type="submit" class="btn-form" value="PROCURAR">
                 </form>

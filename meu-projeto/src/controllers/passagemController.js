@@ -23,7 +23,7 @@ const PassagemController = {
             cidades AS origem ON origem.id = fkCidadeOrigem
         LEFT JOIN
             cidades destino ON destino.id = fkCidadeDestino
-        WHERE
+        WHERE 
             Passagens.fkCidadeDestino = ${destino}
         AND Passagens.fkCidadeOrigem = ${origem};`
 
@@ -32,8 +32,8 @@ const PassagemController = {
 
         const passagensPorCidade = []
         passagens.forEach(passagem => {
-            const { origem, destino, tarifa, horarioSaida, horarioChegada} = passagem;
-            const novaPassagem = {destino, tarifa, horarioSaida, horarioChegada}; 
+            const { origem, destino, tarifa, horarioSaida, horarioChegada, empresa, duracao, meio} = passagem;
+            const novaPassagem = {destino, tarifa, horarioSaida, horarioChegada, empresa, duracao, meio}; 
             const passagemEncontrada = passagensPorCidade.find(cidadeCadastrada => cidadeCadastrada.origem == origem);
             if(passagemEncontrada) {
                 passagemEncontrada.passagens.push(novaPassagem);
