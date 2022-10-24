@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         fkCidadeOrigem: {
             type: DataTypes.INTEGER
         },
-        fkCidadeOrigem: {
+        fkCidadeDestino: {
             type: DataTypes.INTEGER
         },
         meio: {
@@ -42,16 +42,6 @@ module.exports = (sequelize, DataTypes) => {
     }
     
     const Passagens = sequelize.define('Passagens', cols, config);
-    Passagens.associate = (models) => {
-        Passagens.hasMany(models.Cidades, {
-            as: 'origem',
-            foreignKey: 'fkCidadeOrigem'
-        })
-
-        Passagens.hasMany(models.Cidades, {
-            as: 'destino',
-            foreignKey: 'fkCidadeDestino'
-        })
-    }
+   
     return Passagens;
 }

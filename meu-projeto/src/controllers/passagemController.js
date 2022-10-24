@@ -4,46 +4,31 @@ const PassagemController = {
     async filter (req, res) {
        const destino =  req.body.visitor_destino;
        const origem = req.body.visitor_origem;
-        const passagens = await Passagens.findAll({
-            include: [
-                {
-                    model: Cidades,
-                    as: 'origem',  
-                },
-                {
-                    model: Cidades,
-                    as: 'destino',  
-                }
-            ],
-            where: {
-                fkCidadeDestino: destino,
-                fkCidadeOrigem: origem
-            }
-        })
-    //   const query = `SELECT 
-    //         passagens,
-    //         origem.nome AS origem,
-    //         destino.nome AS destino,
-    //         meio,
-    //         empresa,
-    //         tarifa,
-    //         horarioSaidaTime,
-    //         horarioSaida,
-    //         horarioChegada,
-    //         duracao,
-    //         duracaoMin
-    //     FROM
-    //         Passagens AS Passagens
-    //     LEFT JOIN
-    //         cidades AS origem ON origem.id = fkCidadeOrigem
-    //     LEFT JOIN
-    //         cidades destino ON destino.id = fkCidadeDestino
-    //     WHERE
-    //         Passagens.fkCidadeDestino = ${destino}
-    //     AND Passagens.fkCidadeOrigem = ${origem};`
+
+       const query = `SELECT 
+            passagens,
+            origem.nome AS origem,
+            destino.nome AS destino,
+            meio,
+            empresa,
+            tarifa,
+            horarioSaidaTime,
+            horarioSaida,
+            horarioChegada,
+            duracao,
+            duracaoMin
+        FROM
+            Passagens AS Passagens
+        LEFT JOIN
+            cidades AS origem ON origem.id = fkCidadeOrigem
+        LEFT JOIN
+            cidades destino ON destino.id = fkCidadeDestino
+        WHERE
+            Passagens.fkCidadeDestino = ${destino}
+        AND Passagens.fkCidadeOrigem = ${origem};`
 
 
-    //    const [passagens] = await sequelize.query(query);
+       const [passagens] = await sequelize.query(query);
 
         const passagensPorCidade = []
         passagens.forEach(passagem => {
@@ -59,10 +44,8 @@ const PassagemController = {
                 })
             }
         })
-
         const cidades = await Cidades.findAll();
        res.render('transporteEstadia', { cidades, passagensPorCidade: passagensPorCidade.map(passagemCidade => ({
-
         ...passagemCidade,
         passagem: passagemCidade.passagens.flat()
       })) });
