@@ -12,6 +12,7 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
         integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+        
 </head>
 
 <body>
@@ -21,11 +22,13 @@
                 <img src="img/logotipo.jpg">
             </a>
             <div class="nav-links" id="navLinks">
+                <meta name = "viewport" content="widith= device-widith, initial-scale=1">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <meta name = "viewport" content="widith= device-widith, initial-scale=1">
                 <ul>
                     <li><a href="/">HOME</a></li>
                     <li><a href="/trabalhe">TRABALHE CONOSCO</a></li>
+                    <li><a href="/users/profile">PERFIL</a></li>
                     <li><a href="/users/login">LOGIN</a></li>
                 </ul>
             </div>
@@ -56,7 +59,6 @@
                             </option>
                             <% }) %>
                     </select>
-
                     <input type="submit" class="btn-form" value="PROCURAR">
                 </form>
             </div>
