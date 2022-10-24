@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         fkCidadeOrigem: {
             type: DataTypes.INTEGER
         },
-        fkCidadeDestino: {
+        fkCidadeOrigem: {
             type: DataTypes.INTEGER
         },
         meio: {

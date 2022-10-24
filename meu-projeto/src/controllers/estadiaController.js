@@ -4,7 +4,7 @@ const EstadiaController = {
     //mostra lista de produtos
     index: (req, res)=>{
 
-        res.render('transporteEstadia')
+        res.render('transporteEstadia', {cidades:[], passagensPorCidade:[]})
 
     },
 

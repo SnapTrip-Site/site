@@ -1,35 +1,35 @@
 module.exports = (sequelize, DataTypes) => {
     const cols = {
-        id: {
+        idCidade: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        nome: {
+        nomeCidade: {
             type: DataTypes.STRING
         },
         estado: {
             type: DataTypes.STRING
         },
-        tipo: {
+        tipoCidade: {
             type: DataTypes.INTEGER
         },
         rodoviaria: {
             type: DataTypes.STRING
         },
-        lat_rodoviaria: {
+        latRodoviaria: {
             type: DataTypes.DECIMAL(10,8)
         },
-        long_rodoviaria: {
+        longRodoviaria: {
             type: DataTypes.DECIMAL(11,8)
         },
         aeroporto: {
             type: DataTypes.STRING
         },
-        lat_aeroporto: {
+        latAeroporto: {
             type: DataTypes.DECIMAL(10,8)
         },
-        long_aeroporto: {
+        longAeroporto: {
             type: DataTypes.DECIMAL(11,8)
         }
     }
