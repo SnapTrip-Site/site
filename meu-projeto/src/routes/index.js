@@ -8,10 +8,6 @@ const EstadiaController = require('../controllers/estadiaController');
 
 router.get('/', homeController.index);
 
-router.get('/trabalhe', (req, res) => {
-    res.render('trabalheConosco');
-});
-
 router.get('/contato', (req, res) => {
     res.send('Contatos');
 });
