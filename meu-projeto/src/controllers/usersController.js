@@ -1,6 +1,6 @@
-const User = require('../../repositorios/User');
 const bcryptjs = require('bcryptjs');
-
+const userRepository = require('../../repositorios/User');
+const {Cidades, User} = require('../models');
 
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
             return res.render('userForm', {errors, user});
         }
 
-        User.save(user); // se esvier tudo certo com o register, ele salva.
+        userRepository.save(user); // se esvier tudo certo com o register, ele salva.
         res.redirect('/users/login'); // rediciona para pagina de login.
     },
 
@@ -27,21 +27,22 @@ module.exports = {
     async auth (req, res) {
         const userReceived = req.body;
         const errors = [];
-        const userFound = await User.find(userReceived.email); 
+        const userFound = await User.findOne({where: {email: userReceived.email}})
 
         if(!userFound) { 
             errors.push({msg: 'Login Inválido!'});
             return res.render('userForm', {errors, userReceived});
         }
+        console.log(userFound)
         const samePassword = bcryptjs.compareSync(userReceived.password, userFound.senha);
         
         if(!samePassword) {
-            errors.push({msg: 'Senha Inválido!'});
+            errors.push({msg: 'Senha Inválida!'});
             return res.render('userForm', {errors, userReceived});
         }
 
-        delete userReceived.password;
-        req.session.userLogged = userReceived;
+        delete userFound.password;
+        req.session.userLogged = userFound;
 
         if(req.body.remember_user) {
             res.cookie("user", req.body.email, {maxAge: (1000 * 60) * 30});
@@ -51,9 +52,10 @@ module.exports = {
         
     }, 
     async profile (req, res) {
-        console.log(req.cookies.userEmail)
+        const cidades = await Cidades.findAll();
         return res.render('homeUser', {
-            user: req.session.userLogged
+            user: req.session.userLogged, 
+            cidades
         })
     },
     async logout (req, res) {

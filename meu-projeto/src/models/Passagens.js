@@ -42,6 +42,16 @@ module.exports = (sequelize, DataTypes) => {
     }
     
     const Passagens = sequelize.define('Passagens', cols, config);
+    Passagens.associate = (models) => {
+        Passagens.hasMany(models.Cidades, {
+            as: 'origem',
+            foreignKey: 'fkCidadeOrigem'
+        })
 
+        Passagens.hasMany(models.Cidades, {
+            as: 'destino',
+            foreignKey: 'fkCidadeDestino'
+        })
+    }
     return Passagens;
 }
